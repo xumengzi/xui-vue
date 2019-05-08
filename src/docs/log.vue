@@ -2,11 +2,32 @@
     <div class="xui-vue markdown-section">
         <div class="main" >
             <h1>日志</h1>
-            <h6>当前版本: <span class="version">0.6.1</span></h6>
+            <h6>当前版本: <span class="version">0.6.5</span></h6>
             <blockquote>
                 <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
             </blockquote>
             
+            <h3>v0.6.5  <span style="font-size: 16px;">2019/03/15</span></h3>
+            <h5>发布：</h5>
+            <p>将组件的css调整为less</p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
+            <h3>v0.6.4  <span style="font-size: 16px;">2019/02/01</span></h3>
+            <h5>发布：</h5>
+            <p>更新xui-vue的脚手架</p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
+            <h3>v0.6.3  <span style="font-size: 16px;">2018/12/21</span></h3>
+            <h5>发布：</h5>
+            <p>构思sliderBar组件的开发</p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
             <h3>v0.6.2  <span style="font-size: 16px;">2018/10/27</span></h3>
             <h5>发布：</h5>
             <p>调整手机端的样式以及字体</p>

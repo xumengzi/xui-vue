@@ -3,7 +3,10 @@
     <span class="fold" @click="handleFold"></span>
     <ul class="nav">
         <li>
-          <a href="https://xumeng.site/" target="_blank">我的网站</a>
+          <a href="https://x.xumeng.site/book" target="_blank">我的网站</a>
+        </li>
+        <li>
+          <a href="https://github.com/xumengzi/xui-vue" target="_blank">github</a>
         </li>
         <li>
           <router-link to="/">首页</router-link>
