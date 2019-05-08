@@ -19,6 +19,16 @@
     "@vue/cli-service": "^3.7.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.21"
-  }
+    "vue-template-compiler": "^2.5.21",
+    "xumengzi": "^1.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
