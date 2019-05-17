@@ -7,7 +7,6 @@ import store from './vuex/store';
 
 import Message from 'xumengzi';
 Vue.use(Message);
-console.log(Message);
 
 import XNotification from './plugins/notification/notification.js';
 Vue.use(XNotification);

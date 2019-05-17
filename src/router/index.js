@@ -24,12 +24,45 @@ import Cascader from '@/docs/plugins/cascader.vue';
 import Slider from '@/docs/plugins/slider.vue';
 import SliderBar from '@/docs/plugins/sliderBar.vue';
 
+
+import a from '@/docs/a.vue';
+import b from '@/docs/b.vue';
+import c from '@/docs/c.vue';
+
+
+
+
 const router =  new Router({
     routes: [
         {
             path: '/',
             name: 'index',
             component: index,
+        },
+        {
+            path: '/a',
+            name: 'a',
+            component: a,
+        },
+        {
+            path: '/b',
+            name: 'b',
+            component: b,
+            beforeRouteLeave (to, from, next) {
+                // ...
+                console.log(from);
+                next();
+            },
+            beforeRouteEnter (to, from, next) {
+                // ...
+                console.log(from);
+                next();
+            }
+        },
+        {
+            path: '/c',
+            name: 'c',
+            component: c,
         },
         {
             path: '/Learning',
@@ -125,6 +158,11 @@ const router =  new Router({
     scrollBehavior(){
         return {x: 0, y: 0};
     }
+});
+router.beforeEach((to, from, next) => {
+    // ...
+    console.log(from);
+    next();
 })
 
 export default router;
