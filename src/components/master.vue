@@ -42,15 +42,6 @@
         <li>
           <router-link to="/Log">日志</router-link>
         </li>
-        <li>
-          <router-link to="/a">a页面</router-link>
-        </li>
-        <li>
-          <router-link to="/b">b页面</router-link>
-        </li>
-        <li>
-          <router-link to="/c">c页面</router-link>
-        </li>
     </ul>
   </div>
 </template>

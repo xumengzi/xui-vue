@@ -11,7 +11,7 @@
 					<p>依赖: <code>vuejs</code></p>
 				</li>
 				<li>
-					<p>兼容性: IE9及以上高级浏览器</p>
+					<p>兼容性: <code>IE9</code>及以上高级浏览器</p>
 				</li>
 				<li>
 					<p>使用方法: 在你的框架<code>vue</code>中引用<code>plugins</code>里的各个组件</p>

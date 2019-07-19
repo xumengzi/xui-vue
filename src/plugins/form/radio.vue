@@ -56,15 +56,26 @@
     left: 0.6em;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    transition: .2s linear;
+    /* transition: .2s linear; */
+    animation: .1s scale ease-in;
+    transform-origin: center center;
     width: .5em;
     height: .5em;
     border-radius: 50%;
-    background-color: currentColor;
     background: #4eb900;
 }
 .xui_radio:disabled + .xui_radio_box,.xui_radio:checked + .xui_radio_box::before{
     color: #ccc;
     cursor: not-allowed;
+}
+@keyframes scale{
+    0%{
+        transform: translate(-50%, -50%) scale(.4);
+        transform-origin: center center;
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(.4);
+        transform-origin: center center;
+    }
 }
 </style>

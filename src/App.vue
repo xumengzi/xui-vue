@@ -193,7 +193,7 @@ textarea{
 ::-webkit-scrollbar-thumb:horizontal
 {
     width: 5px;
-    background-color: #ccc;
+    background-color: #999;
     -webkit-border-radius: 6px;
 }
 </style>

@@ -72,6 +72,12 @@
 	}
 	input[disabled],button[disabled] {
 	  cursor: not-allowed;
+	  border-color: #dbdbdb;
+	  box-shadow: none;
+	}
+	input[readonly]:focus,button[readonly]:focus {
+	  box-shadow: none;
+	  border-color: #dbdbdb;
 	}
 	.xui_input{
 	    position: relative;
@@ -89,6 +95,7 @@
 	}
 	.xui_input:focus,.xui_textarea:focus{
 	    border-color: #87cba3;
+        box-shadow: 0px 0px 0 #4eb900bd;
 	}
 	.xui_input_required::before{
 	    content: '*';
