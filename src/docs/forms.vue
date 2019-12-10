@@ -1,6 +1,5 @@
 <template>
     <div class="xui-vue">
-        <!-- <master></master> -->
         <div class="main">
             <p class="introduce">按钮<code>button</code></p>
             <x-button type="default">ok</x-button>

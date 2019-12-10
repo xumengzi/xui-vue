@@ -7,6 +7,13 @@
                 <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
             </blockquote>
             
+            <h3>v0.6.6  <span style="font-size: 16px;">2019/06/21</span></h3>
+            <h5>发布：</h5>
+            <p>修改路由引入组件的方法, 以及删除冗余组件</p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
             <h3>v0.6.5  <span style="font-size: 16px;">2019/03/15</span></h3>
             <h5>发布：</h5>
             <p>将组件的css调整为less</p>

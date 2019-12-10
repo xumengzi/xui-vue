@@ -33,7 +33,7 @@
 <script>
 import { mapGetters, mapMutations, mapActions, mapState } from 'vuex';
 
-import From from '../docs/from.vue';
+import Forms from '../docs/forms.vue';
 import Plugins from '../docs/plugins/plugins.vue';
 import Codes from '../assets/codes.vue';
 import master from '@/components/master.vue'
@@ -80,7 +80,7 @@ export default {
 		]),
 	},
 	components:{
-		From,
+		Forms,
 		master,
 		Plugins,
 	}

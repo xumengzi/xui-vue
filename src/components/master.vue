@@ -3,7 +3,7 @@
     <span class="fold" @click="handleFold"></span>
     <ul class="nav">
         <li>
-          <a href="https://x.xumeng.site/book" target="_blank">我的网站</a>
+          <a href="https://xumeng.ink/book/" target="_blank">我的网站</a>
         </li>
         <li>
           <a href="https://github.com/xumengzi/xui-vue" target="_blank">github</a>
@@ -12,7 +12,7 @@
           <router-link to="/">首页</router-link>
         </li>
         <li>
-          <router-link to="/From">表单系列</router-link>
+          <router-link to="/Forms">表单系列</router-link>
         </li>
         <li>
           <router-link to="/Learning">学习系列</router-link>
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import From from '@/docs/from.vue';
+import Forms from '@/docs/forms.vue';
 import Learning from '@/docs/learning.vue';
 import Directive from '@/docs/directive.vue';
 import Log from '@/docs/log.vue';
@@ -87,7 +87,7 @@ export default {
     }
   },
   components:{
-    From,
+    Forms,
     Learning,
     Directive,
     Log,

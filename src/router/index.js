@@ -5,24 +5,8 @@ import master from '@/components/master.vue'
 
 Vue.use(Router);
 
-//各种各样的插件
-import From from '@/docs/from.vue';
-import Learning from '@/docs/learning.vue';
-import Directive from '@/docs/directive.vue';
-import Log from '@/docs/log.vue';
-import Plugins from '@/docs/plugins/plugins.vue';
-import Message from '@/docs/plugins/message.vue';
-import Notification from '@/docs/plugins/notification.vue';
-import Loading from '@/docs/plugins/loading.vue';
-import Modal from '@/docs/plugins/modal.vue';
-import Digital from '@/docs/plugins/digital.vue';
-import Rate from '@/docs/plugins/rate.vue';
-import Dropdown from '@/docs/plugins/dropdown.vue';
-import Tab from '@/docs/plugins/tab.vue';
-import Pagination from '@/docs/plugins/pagination.vue';
-import Cascader from '@/docs/plugins/cascader.vue';
-import Slider from '@/docs/plugins/slider.vue';
-import SliderBar from '@/docs/plugins/sliderBar.vue';
+const _import_ = file => () => import('@/docs/' + file + '.vue');
+const _import_plugins_ = file => () => import('@/docs/plugins/' + file + '.vue');
 
 const router =  new Router({
     routes: [
@@ -34,17 +18,17 @@ const router =  new Router({
         {
             path: '/Learning',
             name: 'Learning',
-            component: Learning,
+            component: _import_('learning'),
         },
         {
             path: '/Directive',
             name: 'Directive',
-            component: Directive,
+            component: _import_('directive'),
         },
         {
             path: '/Log',
             name: 'Log',
-            component: Log,
+            component: _import_('log'),
         },
         {
             path: '/master',
@@ -52,74 +36,74 @@ const router =  new Router({
             component: master,
         },
         {
-            path: '/From',
-            name: 'from',
-            component: From,
+            path: '/Forms',
+            name: 'Forms',
+            component: _import_('forms'),
         },
         {
             path: '/Plugins',
             name: 'plugins',
-            component: Plugins,
+            component: _import_plugins_('plugins'),
         },
         {
             path: '/Message',
             name: 'Message',
-            component: Message,
+            component: _import_plugins_('message'),
         },
         {
             path: '/Notification',
             name: 'Notification',
-            component: Notification,
+            component: _import_plugins_('notification'),
         },
         {
             path: '/Loading',
             name: 'Loading',
-            component: Loading,
+            component: _import_plugins_('loading'),
         },
         {
             path: '/Modal',
             name: 'Modal',
-            component: Modal,
+            component: _import_plugins_('modal'),
         },
         {
             path: '/Rate',
             name: 'Rate',
-            component: Rate,
+            component: _import_plugins_('rate'),
         },
         {
             path: '/Digital',
             name: 'Digital',
-            component: Digital,
+            component: _import_plugins_('digital'),
         },
         {
             path: '/Dropdown',
             name: 'Dropdown',
-            component: Dropdown,
+            component: _import_plugins_('dropdown'),
         },
         {
             path: '/Tab',
             name: 'Tab',
-            component: Tab,
+            component: _import_plugins_('tab'),
         },
         {
             path:'/Pagination',
             name: 'Pagination',
-            component: Pagination,
+            component: _import_plugins_('pagination'),
         },
         {
             path:'/Cascader',
             name: 'Cascader',
-            component: Cascader,
+            component: _import_plugins_('cascader'),
         },
         {
             path: '/Slider',
             name: 'Slider',
-            component: Slider,
+            component: _import_plugins_('slider'),
         },
         {
             path: '/SliderBar',
             name: 'SliderBar',
-            component: SliderBar,
+            component: _import_plugins_('sliderBar'),
         }
     ],
     scrollBehavior(){
@@ -127,8 +111,6 @@ const router =  new Router({
     }
 });
 router.beforeEach((to, from, next) => {
-    // ...
-    console.log(from);
     next();
 })
 
