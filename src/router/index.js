@@ -6,7 +6,7 @@ import master from '@/components/master.vue'
 Vue.use(Router);
 
 const _import_ = file => () => import('@/docs/' + file + '.vue');
-const _import_plugins_ = file => () => import('@/docs/plugins/' + file + '.vue');
+const _import_plugins_ = file1 => () => import('@/docs/plugins/' + file1 + '.vue');
 
 const router =  new Router({
     routes: [

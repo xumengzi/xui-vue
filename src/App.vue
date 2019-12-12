@@ -176,24 +176,24 @@ textarea{
 
 ::-webkit-scrollbar
 {
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
 }
 ::-webkit-scrollbar-track-piece
 {
     background-color: #ccc;
-    -webkit-border-radius: 6px;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:vertical
 {
-    height: 5px;
+    height: 10px;
     background-color: #999;
-    -webkit-border-radius: 6px;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:horizontal
 {
-    width: 5px;
+    width: 10px;
     background-color: #999;
-    -webkit-border-radius: 6px;
+    border-radius: 10px;
 }
 </style>

@@ -44,7 +44,6 @@ scrollBehavior(to, from, savePosition){
     },
     mounted(){
       this.$nextTick(function(){
-        console.log(this.$base.a);
       })
     },
     components:{

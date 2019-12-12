@@ -70,6 +70,7 @@ const inputlimit = {
                 el.value = '';
             }
         }
+        console.log(111)
         //事件绑定在binding.arg上面
         el.onblur = eventHandler;
     },
@@ -112,11 +113,51 @@ const copytoclipboard = {
     }
 };
 
-_directive.install = function(Vue){
-    Vue.directive('loadimg', loadimg);
-    Vue.directive('clickoutside', clickoutside);
-    Vue.directive('inputlimit', inputlimit);
-    Vue.directive('copytoclipboard', copytoclipboard);
+//数字动画
+const digitalScroll = {
+  bind(el, binding) {
+    const obj = {
+      increase() {
+        this.val += this.opts.step;
+        el.innerHTML = this.val;
+        this.initCount++;
+        if (this.initCount == this.counts) {
+          clearInterval(this.timer);
+          el.innerHTML = this.opts.desVal;
+        }
+      },
+      event() {
+        let { interval } = this.opts;
+        this.timer = setInterval(() => {
+          this.increase();
+        }, interval);
+      },
+      init() {
+        const defaults = {
+          desVal: binding.value,
+          step: Math.floor(binding.value / 10),
+          interval: 100
+        };
+        this.opts = Object.assign({}, defaults);
+        this.val = 0;
+        this.counts = Math.floor(this.opts.desVal / this.opts.step);
+        this.initCount = 0;
+        this.timer = null;
+        this.event();
+      }
+    };
+    !isNaN(binding.value) && obj.init();
+  },
+  update(el, binding) {
+    digitalScroll.bind(el, binding)
+  }
 };
 
+_directive.install = function(Vue){
+  Vue.directive('loadimg', loadimg);
+  Vue.directive('clickoutside', clickoutside);
+  Vue.directive('inputlimit', inputlimit);
+  Vue.directive('copytoclipboard', copytoclipboard);
+  Vue.directive('digitalScroll', digitalScroll);
+};
 export default _directive;

@@ -41,12 +41,24 @@
                 <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
             </ul>
             <codes :codes="copytoclipboard"></codes>
+            <h2>4.<code>v-digitalScroll</code>指令</h2>
+            <blockquote>
+                <p>说明: 需要在展示数字的地方添加这个指令,即可给数字添加动画了</p>
+            </blockquote>
+            <p>1.引用即可使用</p>
+            <ul>
+                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+            </ul>
+            <codes :codes="digitalScroll"></codes>
+            <p v-digitalScroll="digiNum"></p>
+            <x-button type="default" @click="handleClick">change</x-button>
         </div>
     </div>
 </template>
 
 <script>
 import Codes from '@/assets/codes.vue';
+import XButton from '../plugins/form/button.vue';
 
 export default {
     name: 'show',
@@ -147,10 +159,18 @@ Vue.directive('copytoclipboard', {
     }
 })
 `,
+          digiNum: 999,
+          digitalScroll: `<p v-digitalScroll="999"></p>`
         }
+    },
+    methods: {
+      handleClick(){
+        this.digiNum = Math.round(Math.random() * 1000) + 100;
+      }
     },
     components:{
         Codes,
+        XButton
     }
 }
 </script>
