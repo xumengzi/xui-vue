@@ -18,7 +18,7 @@
 				<li><code>isInput</code>表示是否支持手动输入数字,如果输入大于或者小于临界值则会自动更改为临界值,默认值为<code>true</code></li>
 				<li><code>fn</code>表示操作后的回调,返回当前选择或输入的数字</li>
 				<li>如果需要小一些的数字框,可以加上<code>xui_digital_small</code>即可</li>
-				<li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+				<li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
 			</ul>
 	        <h3>效果展示</h3>
 	        <p>1.按照惯例, 先举一个简单例子</p>

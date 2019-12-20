@@ -11,7 +11,7 @@
     			<li><code>activeStars</code>点亮的星星数量 <strong>必传</strong></li>
     			<li><code>allStars</code>所有的星星数,默认是5个</li>
     			<li><code>size</code>星星大小</li>
-    			<li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+    			<li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
     		</ul>
             <h3>效果展示</h3>
             <p>1.先来一个五星好评</p>

@@ -12,7 +12,7 @@
                 <li><code>direction</code> <code>tab</code>展示的方向,默认<code>x</code>轴,水平方向 <code>String</code></li>
                 <li><code>activeIndex</code>当前激活的<code>tab</code>索引值, 从0开始 <code>Number</code></li>
                 <li><code>change</code>切换的回调,返回的是<code>this</code> <code>Function</code></li>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <h3>效果展示</h3>
             <p>1.只需要配置<code>tabList</code>数据,即可展示出来</p>

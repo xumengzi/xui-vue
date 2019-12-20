@@ -13,7 +13,7 @@
                 <li><code>defaultVal</code>默认选中的一项,类型为数字<code>value</code>,默认是0</li>
                 <li><code>isSearch</code>是否显示搜索框,默认是<code>false</code></li>
                 <li><code>placeholder</code>搜索框的文字,默认是<code>search</code></li>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <h3>效果展示</h3>
             <p>1.先来一个最简单的配置</p>

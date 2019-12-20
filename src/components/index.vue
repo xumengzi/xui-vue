@@ -25,7 +25,7 @@
 			</blockquote>
 			<h5>个人项目,如有问题还请指出,不胜感激.</h5>
 			<h5>欢迎不吝赐教</h5>
-			<h6>联系我: <em>me@xumeng.site</em></h6>
+			<h6>联系我: <em>xumeng0611@gmail.com</em></h6>
 		</div>
 	</div>
 </template>

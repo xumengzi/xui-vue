@@ -12,7 +12,7 @@
                 <li><code>isShowClose</code>表示是否显示右上角关闭按钮</li>
                 <li>不限制按钮的个数,当然如果一个按钮都不配置, 那么保证<code>isShowClose</code>为<code>true</code>, 不然弹框无法关闭</li>
                 <li>按钮都有回调,右上角的关闭按钮和取消按钮的回调是一样的</li>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <h3>效果展示</h3>
             <p>1.先来看看简单的效果,仅仅是弹个框</p>

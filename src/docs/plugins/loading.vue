@@ -15,7 +15,7 @@
                     <code>string</code>表示<code>loading</code>显示在这个里面, 也不是全屏<code>loading</code>, 默认全屏
                 </li>
                 <li>
-                    没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧
+                    没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧
                 </li>
             </ul>
             <h3>效果展示</h3>

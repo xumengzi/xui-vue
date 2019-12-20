@@ -24,18 +24,18 @@
           <router-link to="/Plugins">插件系列</router-link>
           <ul>
             <li>
-              <router-link to="/Message">消息提示 message</router-link>
-              <router-link to="/Notification">通知提醒 notification</router-link>
-              <router-link to="/Loading">加载 loading</router-link>
-              <router-link to="/Modal">对话弹框 modal</router-link>
-              <router-link to="/Rate">评分 rate</router-link>
-              <router-link to="/Digital">数字输入框 digital</router-link>
-              <router-link to="/Dropdown">下拉框 dropdown</router-link>
-              <router-link to="/Tab">tab切换 tabChange</router-link>
-              <router-link to="/Pagination">分页 pagination</router-link>
-              <router-link to="/Cascader">三级联动 cascader</router-link>
-              <router-link to="/Slider">幻灯片 slider</router-link>
-              <router-link to="/SliderBar">滑动选择框 sliderBar</router-link>
+              <router-link to="/Plugins/Message">消息提示 message</router-link>
+              <router-link to="/Plugins/Notification">通知提醒 notification</router-link>
+              <router-link to="/Plugins/Loading">加载 loading</router-link>
+              <router-link to="/Plugins/Modal">对话弹框 modal</router-link>
+              <router-link to="/Plugins/Rate">评分 rate</router-link>
+              <router-link to="/Plugins/Digital">数字输入框 digital</router-link>
+              <router-link to="/Plugins/Dropdown">下拉框 dropdown</router-link>
+              <router-link to="/Plugins/Tab">tab切换 tabChange</router-link>
+              <router-link to="/Plugins/Pagination">分页 pagination</router-link>
+              <router-link to="/Plugins/Cascader">三级联动 cascader</router-link>
+              <router-link to="/Plugins/Slider">幻灯片 slider</router-link>
+              <router-link to="/Plugins/SliderBar">滑动选择框 sliderBar</router-link>
             </li>
           </ul>
         </li>

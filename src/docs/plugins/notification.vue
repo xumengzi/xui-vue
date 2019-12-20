@@ -24,7 +24,7 @@
                     <code>fn</code>表示通知提醒框的关闭的回调事件
                 </li>
                 <li>
-                    没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧
+                    没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧
                 </li>
             </ul>
             <h3>效果展示</h3>

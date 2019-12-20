@@ -12,7 +12,7 @@
 				<li><code>position</code>表示弹出框的位置,默认`bottom`,支持`top`</li>
 				<li><code>placeholder</code>表示提示文案,默认请选择</li>
 				<li><code>change</code>表示选择后的的回调,返回当前选中的值</li> 
-				<li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+				<li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
 			</ul>
 			<codes :codes="params"></codes>
 			<h3>效果展示</h3>

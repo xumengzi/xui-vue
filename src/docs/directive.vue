@@ -20,7 +20,7 @@
             <ul>
                 <li>支持设置默认图, 不设置则不展示</li> 
                 <li>404图片可以不设置, 但是需要设置好图片错误显示文案的样式</li> 
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <codes :codes="loadimg"></codes>
             <h2>2.<code>v-clickoutside</code>指令</h2>
@@ -29,7 +29,7 @@
             </blockquote>
             <p>1.引用即可使用</p>
             <ul>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <codes :codes="clickoutside"></codes>
             <h2>3.<code>v-copytoclipboard</code>指令</h2>
@@ -38,7 +38,7 @@
             </blockquote>
             <p>1.引用即可使用</p>
             <ul>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <codes :codes="copytoclipboard"></codes>
             <h2>4.<code>v-digitalScroll</code>指令</h2>
@@ -47,7 +47,7 @@
             </blockquote>
             <p>1.引用即可使用</p>
             <ul>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <codes :codes="digitalScroll"></codes>
             <p v-digitalScroll="digiNum"></p>

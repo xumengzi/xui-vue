@@ -16,7 +16,7 @@
                 <li><code>isJumpPage</code>表示是否显示支持跳转的输入框(纯数字),输入大于分页总数则默认跳至最后一页,仅可输入数字</li>
                 <li><code>click</code>可以获取当前点击分页的数字,可以用<code>ajax</code>获取数据,渲染页面</li>
                 <li><code>enter</code>用于跳转到对应的页面</li>
-                <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
+                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
             </ul>
             <h3>效果展示</h3>
             <p>1.先来看看最简单分页,麻雀虽小五脏俱全呀!</p>
