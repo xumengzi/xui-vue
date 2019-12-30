@@ -2,11 +2,18 @@
     <div class="xui-vue markdown-section">
         <div class="main" >
             <h1>日志</h1>
-            <h6>当前版本: <span class="version">0.6.5</span></h6>
+            <h6>当前版本: <span class="version">0.7.7</span></h6>
             <blockquote>
                 <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
             </blockquote>
             
+            <h3>v0.7.7  <span style="font-size: 16px;">2019/10/21</span></h3>
+            <h5>发布：</h5>
+            <p><code>vue-cli</code>升级到<code>4.1.2</code>啦, 本项目也升级到了<code>4.1.2</code>, 快去升级享受新特性吧!</p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
             <h3>v0.6.7  <span style="font-size: 16px;">2019/07/11</span></h3>
             <h5>发布：</h5>
             <p>1.<a href="#/Directive">指令</a>增加<code>digitalScroll</code>指令, 可以让数字动起来</p>
@@ -23,21 +30,21 @@
 
             <h3>v0.6.5  <span style="font-size: 16px;">2019/03/15</span></h3>
             <h5>发布：</h5>
-            <p>1.将组件的css调整为less</p>
+            <p>1.将组件的<code>css</code>调整为<code>less</code></p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
 
             <h3>v0.6.4  <span style="font-size: 16px;">2019/02/01</span></h3>
             <h5>发布：</h5>
-            <p>1.更新xui-vue的脚手架</p>
+            <p>1.更新<code>xui-vue</code>的脚手架</p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
 
             <h3>v0.6.3  <span style="font-size: 16px;">2018/12/21</span></h3>
             <h5>发布：</h5>
-            <p>1.构思sliderBar组件的开发</p>
+            <p>1.构思<code>sliderBar</code>组件的开发</p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
