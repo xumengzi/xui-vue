@@ -58,21 +58,21 @@
 
             <h3>v0.6.1  <span style="font-size: 16px;">2018/08/11</span></h3>
             <h5>发布：</h5>
-            <p>1.<a href="#/Notification">通知提醒组件</a></p>
+            <p>1.<a href="#/Plugins/Notification">通知提醒组件</a></p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
 
             <h3>v0.5.1  <span style="font-size: 16px;">2018/07/28</span></h3>
             <h5>发布：</h5>
-            <p>1.<a href="#/Cascader">级联选择组件</a></p>
+            <p>1.<a href="#/Plugins/Cascader">级联选择组件</a></p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
 
             <h3>v0.4.1  <span style="font-size: 16px;">2018/06/01</span></h3>
             <h5>发布：</h5>
-            <p>1.<a href="#/Pagination">分页组件</a></p>
+            <p>1.<a href="#/Plugins/Pagination">分页组件</a></p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
@@ -93,7 +93,7 @@
 
             <h3>v0.1.1  <span style="font-size: 16px;">2018/02/06</span></h3>
             <h5>新增：</h5>
-            <p>1.<a href="#/From">表单组件</a></p>
+            <p>1.<a href="#/Forms">表单组件</a></p>
             <blockquote>
                 <p>是否兼容现有代码：是</p>
             </blockquote>
