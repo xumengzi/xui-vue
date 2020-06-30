@@ -13,16 +13,8 @@
 				<li>
 					<p>兼容性: <code>IE9</code>及以上高级浏览器</p>
 				</li>
-				<li>
-					<p>使用方法: 在你的框架<code>vue</code>中引用<code>plugins</code>里的各个组件</p>
-				</li>
 			</ul>
-			<blockquote>
-				<p>说明: 每一个组件均有自己的<code>less</code>等, 所以可以引用任何一个组件.需要注意依赖的组件</p>
-			</blockquote>
-			<blockquote>
-				<p>说明: 你可以在<code>/src/plugins</code>文件夹里找到源代码, <code>css</code>采用<code>less</code>进行编译</p>
-			</blockquote>
+			<codes :codes="instructions"></codes>
 			<h5>个人项目,如有问题还请指出,不胜感激.</h5>
 			<h5>欢迎不吝赐教</h5>
 			<h6>联系我: <em>xumeng0611@gmail.com</em></h6>
@@ -43,7 +35,22 @@ export default {
 	data () {
 		return {
 			msg: 'Welcome to my xui-vue App',
-			introduce: 'How many codes must a man edit before you call him a master?'
+			introduce: 'How many codes must a man edit before you call him a master?',
+			instructions: `使用方法如下
+1. npm install xuijs
+
+2. 按需引入各个组件
+import {
+  XuiCalender,
+  XuiSlider,
+  XuiCascader,
+  XuiDigital
+} from 'xuijs';
+
+Vue.use(XuiCalender);
+Vue.use(XuiSlider);
+Vue.use(XuiCascader);
+Vue.use(XuiDigital);`
 		}
 	},
 	created(){
@@ -81,6 +88,7 @@ export default {
 	},
 	components:{
 		Forms,
+		Codes,
 		master,
 		Plugins,
 	}

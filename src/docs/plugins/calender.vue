@@ -17,18 +17,16 @@
         <x-button type="default" @click="change(-1)">上一个月</x-button>
         <span>当前月份: {{currentDate}}</span>
         <x-button type="default" @click="change(1)">下一个月</x-button>
-        <x-canlender :currentDate="currentDate" @sendCurrentDate="getCurrentDate"/>
+        <xui-calender :currentDate="currentDate" @sendCurrentDate="getCurrentDate"/>
 		</div>
 	</div>
 </template>
 
 <script>
 import XButton from '@/plugins/form/button.vue';
-import XCanlender from '@/plugins/calender/calender.vue';
 import Codes from '@/assets/codes.vue';
-
 export default {
-	name: 'show',
+	name: 'calender',
 	data () {
 		return {
 			params: 
@@ -37,6 +35,40 @@ import XCanlender from '@/plugins/calender/calender.vue';
 
 <x-canlender :currentDate="currentDate" @sendCurrentDate="getCurrentDate"/>`,
       currentDate: '2020-06-01',
+      imgList: [
+        {
+          link: 'https://xumeng.ink/book/',
+          imgUrl: 'http://img.infinitynewtab.com/wallpaper/1111.jpg',
+        },
+        {
+          link: 'https://github.com/xumengzi/xui-vue',
+          imgUrl: 'http://img.infinitynewtab.com/wallpaper/1234.jpg',
+        },
+        {
+          link: 'https://xumeng.site/xui-vue/index.html#/',
+          imgUrl: 'http://img.infinitynewtab.com/wallpaper/2345.jpg',
+        },
+      ],
+      list: [
+				'艾欧尼亚  电信',
+				'比尔吉沃特  网通',
+				'祖安 电信',
+				'诺克萨斯  电信',
+				'德玛西亚 网通',
+				'班德尔城 电信',
+				'皮尔特沃夫 电信',
+				'战争学院 电信',
+				'弗雷尔卓德 网通',
+				'巨神峰 电信',
+				'雷瑟守备 电信',
+				'无畏先锋 网通',
+				'裁决之地 电信',
+				'黑色玫瑰 电信',
+				'暗影岛 电信',
+				'钢铁烈阳 电信',
+				'恕瑞玛 网通',
+				'均衡教派 电信',
+			],
 		}
 	},
 	methods: {
@@ -57,10 +89,13 @@ import XCanlender from '@/plugins/calender/calender.vue';
     zeroFill(e) {
       return e < 10 ? "0" + e : e;
     },
+    getData(d){
+      console.log(d)
+    }
 	},
 	components:{
-		XCanlender,
     Codes,
+    // Calender,
     XButton
 	}
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="xui-vue markdown-section">
         <div class="main">
-            <h1>select</h1>
+            <h1>dropdown</h1>
             <blockquote>
                 <p>说明: 当选项过多时，使用下拉菜单展示并选择内容</p>
             </blockquote>
@@ -17,18 +17,18 @@
             </ul>
             <h3>效果展示</h3>
             <p>1.先来一个最简单的配置</p>
-            <x-dropdown
+            <xui-dropdown
                 :list="list"
                 :selectVal="selectedVal"
                 @handleChange="showVal"
                 >
-            </x-dropdown>
+            </xui-dropdown>
             <codes :codes="select_1"></codes>
             <p>2.可以默认选中一项, 设置好对应的<code>defaultVal</code>值即可.这里我设置了<code>isSearch</code>为<code>true</code>所以可以展示搜索框</p>
             <blockquote>
                 <p>说明: 搜索依赖列表数据,支持<code>key</code>或者<code>value</code>搜索</p>
             </blockquote>
-            <x-dropdown
+            <xui-dropdown
                 :list="list"
                 :selectVal="selectedVal"
                 @handleChange="showVal"
@@ -36,15 +36,13 @@
                 placeholder="type to search"
                 :defaultVal="2"
                 >
-            </x-dropdown>
+            </xui-dropdown>
             <codes :codes="select_2"></codes>
         </div>
     </div>
 </template>
 
 <script>
-import XDropdown from '@/plugins/dropdown/dropdown.vue';
-
 import Codes from '@/assets/codes.vue';
 
 export default {
@@ -74,10 +72,7 @@ export default {
                 value: '',
             },
             params: 
-`//导入组件
-import XDropdown from '@/plugins/dropdown/dropdown.vue';
-
-<x-dropdown
+`<xui-dropdown
     :list="list"
     :selectVal="selectedVal"
     :isSearch="true"
@@ -85,7 +80,7 @@ import XDropdown from '@/plugins/dropdown/dropdown.vue';
     @handleChange="showVal"
     :defaultVal="2"
     >
-</x-dropdown>
+</xui-dropdown>
 //声明好data属性等
 list: [
     {
@@ -111,16 +106,16 @@ showVal(){
 }
 `,
             select_1: 
-`<x-dropdown
+`<xui-dropdown
     :list="list"
     :selectVal="selectedVal"
     @handleChange="showVal"
 >
-</x-dropdown>
+</xui-dropdown>
 `,
             select_2: 
 `//只需添加需要选中的默认值即可
-<x-dropdown
+<xui-dropdown
     :list="list"
     :selectVal="selectedVal"
     @handleChange="showVal"
@@ -128,20 +123,16 @@ showVal(){
     placeholder="type to search"
     :defaultVal="2"
 >
-</x-dropdown>
+</xui-dropdown>
 `
         }
     },
-    mounted(){
-        this.$nextTick(function(){})
-    },
     methods: {
         showVal(){
-            // console.log(this.selectedVal);
+            console.log(this.selectedVal);
         },
     },
     components:{
-        XDropdown,
         Codes,
     }
 }

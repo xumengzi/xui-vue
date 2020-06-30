@@ -21,7 +21,7 @@ export default {
 		return {
 			imgList: [
 		        {
-		            link: 'http://xumeng.site/',
+		            link: 'https://xumeng.ink/book/',
 		            imgUrl: 'http://img.infinitynewtab.com/wallpaper/1111.jpg',
 		        },
 		        {

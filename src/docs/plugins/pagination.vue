@@ -20,14 +20,14 @@
             </ul>
             <h3>效果展示</h3>
             <p>1.先来看看最简单分页,麻雀虽小五脏俱全呀!</p>
-            <x-pagination 
+            <xui-pagination 
                 :index="3"
                 :total="5"
                 @click="test1"
-            ></x-pagination>
+            ></xui-pagination>
             <codes :codes="page_1"></codes>
             <p>2.慢慢的你需要更多功能来满足日益增长的需求,所以没办法你把所有的配置都写上去了,期待这生一个完美的解决方案</p>
-            <x-pagination 
+            <xui-pagination 
                 :index="2"
                 :total="10"
                 isShowDot="true"
@@ -35,14 +35,13 @@
                 isJumpPage="true"
                 @click="test2"
                 @enter="test2"
-            ></x-pagination>
+            ></xui-pagination>
             <codes :codes="page_2"></codes>
         </div>
     </div>
 </template>
 
 <script type="text/javascript">
-import XPagination from '@/plugins/pagination/pagination.js';
 import Codes from '@/assets/codes.vue';
 
 export default {
@@ -50,44 +49,37 @@ export default {
     data(){
         return{
             params: 
-`//导入组件
-import XPagination from '@/plugins/pagination/pagination.vue';
-
-<x-pagination 
+`<xui-pagination 
     :index="3"
     :total="10"
     isShowDot="true"
     isJumpPage="true"
     @click="test"
     @enter="test"
-></x-pagination>
+></xui-pagination>
 
 //对应的回调
 test(inx){
     console.log(inx);
 }`,
             page_1: 
-`<x-pagination 
+`<xui-pagination 
     :index="3"
     :total="10"
     @click="test"
-></x-pagination>
+></xui-pagination>
 `,
             page_2: 
-`<x-pagination 
+`<xui-pagination 
     :index="2"
     :total="10"
     isShowDot="true"
     isJumpPage="true"
     @click="test2"
     @enter="test2"
-></x-pagination>
+></xui-pagination>
 `
         }
-    },
-    mounted(){
-        this.$nextTick(function(){
-        })
     },
     methods:{
         test1(inx){
@@ -98,7 +90,6 @@ test(inx){
         }
     },
     components:{
-        XPagination,
         Codes
     }
 };

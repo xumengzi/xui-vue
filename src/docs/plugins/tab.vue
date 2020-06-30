@@ -19,21 +19,20 @@
             <blockquote>
                 <p>说明: 标题和内容均支持标签,样式等</p>
             </blockquote>
-            <x-tab :tabList="tabs"></x-tab>
+            <xui-tab :tabList="tabs"/>
             <codes :codes="tab_1"></codes>
             <p>2.让我们来增加一些参数, 让tab更灵活</p>
-            <x-tab :tabList="tabs" :direction="vertical" :activeIndex="-3" @change="callback($event)"></x-tab>
+            <xui-tab :tabList="tabs" :direction="vertical" :activeIndex="-3" @change="callback($event)" />
             <codes :codes="tab_2"></codes>
         </div>
     </div>
 </template>
 
 <script>
-import XTab from '@/plugins/tab/tab.vue';
 import Codes from '@/assets/codes.vue';
 
 export default {
-    name: 'show',
+    name: 'tab',
     data () {
         return {
             tabs: [
@@ -52,10 +51,7 @@ export default {
             ],
             vertical: 'y',
             params: 
-`//导入组件
-import XTab from '@/plugins/tab/tab.vue';
-
-<x-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)"></x-tab>
+`<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />
 
 tabs: [
     {
@@ -72,12 +68,9 @@ tabs: [
     }
 ],
 `,
-            tab_1: '<x-tab :tabList="tabs"></x-tab>',
-            tab_2: '<x-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)"></x-tab>',
+            tab_1: '<xui-tab :tabList="tabs" />',
+            tab_2: '<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />',
         }
-    },
-    mounted(){
-        this.$nextTick(function(){})
     },
     methods: {
         callback(tar){
@@ -85,7 +78,6 @@ tabs: [
         }
     },
     components:{
-        XTab,
         Codes
     }
 }
