@@ -7,6 +7,13 @@
                 <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
             </blockquote>
             
+            <h3>v0.8.7  <span style="font-size: 16px;">2020/01/11</span></h3>
+            <h5>发布：</h5>
+            <p>1.<a href="#/Plugins/Calender">日历组件</a></p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
             <h3>v0.7.7  <span style="font-size: 16px;">2019/10/21</span></h3>
             <h5>发布：</h5>
             <p><code>vue-cli</code>升级到<code>4.1.2</code>啦, 本项目也升级到了<code>4.1.2</code>, 快去升级享受新特性吧!</p>

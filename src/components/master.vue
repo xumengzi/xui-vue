@@ -35,6 +35,7 @@
               <router-link to="/Plugins/Pagination">分页 pagination</router-link>
               <router-link to="/Plugins/Cascader">三级联动 cascader</router-link>
               <router-link to="/Plugins/Slider">幻灯片 slider</router-link>
+              <router-link to="/Plugins/Calender">日历 calendar</router-link>
               <router-link to="/Plugins/SliderBar">滑动选择框 sliderBar</router-link>
             </li>
           </ul>
@@ -62,6 +63,7 @@ import Dropdown from '@/docs/plugins/dropdown.vue';
 import Tab from '@/docs/plugins/tab.vue';
 import Pagination from '@/docs/plugins/pagination.vue';
 import Cascader from '@/docs/plugins/cascader.vue';
+import Calender from '@/docs/plugins/calender.vue';
 import Slider from '@/docs/plugins/slider.vue';
 import SliderBar from '@/docs/plugins/sliderBar.vue';
 

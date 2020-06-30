@@ -101,6 +101,11 @@ const router =  new Router({
             component: _import_plugins_('slider'),
         },
         {
+            path: '/Plugins/Calender',
+            name: 'Calender',
+            component: _import_plugins_('calender'),
+        },
+        {
             path: '/Plugins/SliderBar',
             name: 'SliderBar',
             component: _import_plugins_('sliderBar'),
