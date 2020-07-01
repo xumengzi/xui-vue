@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
     export default{
-        name: 'xui_radio',
+        name: 'XuiRadio',
         data(){
             return{}
         },
@@ -24,7 +24,7 @@
     }
 </script>
 
-<style >
+<style lang="less" scoped>
 .xui_radio_box{
     position: relative;
     padding-left: 1.5em;

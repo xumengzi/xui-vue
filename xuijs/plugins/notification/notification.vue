@@ -9,17 +9,16 @@
 				{{defaultOpts.content}}
 			</div>
 			<div class="xui_notification_foot">
-				<x-button type="default"
+				<xui-button type="default"
                     v-if="defaultOpts.btn"
                     @click="handleConfirm"
-                >confirm</x-button>
+                >confirm</xui-button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script type="text/javascript">
-import XButton from '../form/button.vue';
 
 export default{
 	name: 'XuiNotification',
@@ -66,7 +65,6 @@ export default{
 		clearInterval(this.timer);
 	},
 	components: {
-		XButton
 	}
 }
 </script>

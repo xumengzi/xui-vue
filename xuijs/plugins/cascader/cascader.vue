@@ -1,13 +1,13 @@
 <template>
     <div class="xui_cascader" v-clickoutside="handleClickOutSide">
-        <x-input type="text" 
+        <xui-input type="text" 
             readonly="readonly" 
             :placeholder="placeholder || '请选择'"
             styles="xui_input_cas"
             :value="currentValue"
             self="cascader"
             @click="handleShowCas"
-        ></x-input>
+        ></xui-input>
         <div class="xui_cascader_box" 
             v-show="isShowCas" 
             :class="{xui_cascader_top: position == 'top'}"

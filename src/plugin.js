@@ -13,7 +13,10 @@ import {
   XuiLoading,
   XuiMessage,
   XuiModal,
-  XuiNotification
+  XuiNotification,
+  XuiButton,
+  XuiInput,
+  XuiRadio
 } from 'xuijs';
 
 Vue.use(XuiCalender);
@@ -24,6 +27,10 @@ Vue.use(XuiTab);
 Vue.use(XuiRate);
 Vue.use(XuiDropdown);
 Vue.use(XuiPagination);
+
+Vue.use(XuiButton);
+Vue.use(XuiInput);
+Vue.use(XuiRadio);
 
 Vue.use(XuiLoading);
 Vue.use(XuiMessage);

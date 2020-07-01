@@ -29,17 +29,16 @@
             </ul>
             <h3>效果展示</h3>
             <p>1.同样, 我们先来展示一个最少配置的例子</p>
-            <x-button type="default" @click="notification1">试试看</x-button>
+            <xui-button type="default" @click="notification1">试试看</xui-button>
             <codes :codes="notification_1"></codes>
             <p>2.接下来, 让我们来看看进阶版的例子</p>
-            <x-button type="default" @click="notification2">试试看</x-button>
+            <xui-button type="default" @click="notification2">试试看</xui-button>
             <codes :codes="notification_2"></codes>
         </div>
     </div>
 </template>
 
 <script type="text/javascript">
-import XButton from '@/plugins/form/button.vue';
 import Codes from '@/assets/codes.vue';
 
 export default {
@@ -77,10 +76,6 @@ this.$notification({
 `,
         }
     },
-    mounted(){
-        this.$nextTick(function(){
-        })
-    },
     methods:{
         notification1(){
             let that = this;
@@ -103,7 +98,6 @@ this.$notification({
         },
     },
     components:{
-        XButton,
         Codes
     }
 };

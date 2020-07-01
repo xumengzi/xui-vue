@@ -51,14 +51,13 @@
             </ul>
             <codes :codes="digitalScroll"></codes>
             <p v-digitalScroll="digiNum"></p>
-            <x-button type="default" @click="handleClick">change</x-button>
+            <xui-button type="default" @click="handleClick">change</xui-button>
         </div>
     </div>
 </template>
 
 <script>
 import Codes from '@/assets/codes.vue';
-import XButton from '../plugins/form/button.vue';
 
 export default {
     name: 'show',
@@ -159,18 +158,17 @@ Vue.directive('copytoclipboard', {
     }
 })
 `,
-          digiNum: 999,
-          digitalScroll: `<p v-digitalScroll="999"></p>`
+            digiNum: 999,
+            digitalScroll: `<p v-digitalScroll="999"></p>`
         }
     },
     methods: {
-      handleClick(){
-        this.digiNum = Math.round(Math.random() * 1000) + 100;
-      }
+        handleClick(){
+            this.digiNum = Math.round(Math.random() * 1000) + 100;
+        }
     },
     components:{
         Codes,
-        XButton
     }
 }
 </script>

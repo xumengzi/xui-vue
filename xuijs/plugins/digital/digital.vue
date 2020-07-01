@@ -1,23 +1,22 @@
 <template>
 	<div class="xui_digital" :class="{xui_digital_small: size}">
-		<x-button type="default" styles="xui_sub" 
+		<xui-button type="default" styles="xui_sub" 
 			@click="handleChoose($event, -1)" 
-		>-</x-button>
-		<x-input type="text" 
+		>-</xui-button>
+		<xui-input type="text" 
 			:limit="limit"
 			:value="currentValue"
 			styles="xui_digital_input" 
 			@change="handleChoose($event)"
-		></x-input>
-		<x-button type="default" styles="xui_add" 
+		></xui-input>
+		<xui-button type="default" styles="xui_add" 
 			:isDisabled="test"
 			@click="handleChoose($event, 1)"
-		>+</x-button>
+		>+</xui-button>
 	</div>
 </template>
 
 <script type="text/javascript">
-import XButton from '../form/button.vue';
 import XInput from '../form/input.vue';
 
 export default{
@@ -102,8 +101,6 @@ export default{
 		},
 	},
 	components: {
-		XButton,
-		XInput
 	}
 }
 </script>

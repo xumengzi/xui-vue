@@ -10,6 +10,11 @@ import XuiLoading from './plugins/loading/loading.js';
 import XuiMessage from './plugins/message/message.js';
 import XuiModal from './plugins/modal/modal.js';
 import XuiNotification from './plugins/notification/notification.js';
+import { 
+  Button as XuiButton,
+  Input as XuiInput,
+  Radio as XuiRadio
+}  from './plugins/form/form.js';
 
 export {
   XuiCalender,
@@ -23,5 +28,8 @@ export {
   XuiLoading,
   XuiMessage,
   XuiModal,
-  XuiNotification
+  XuiNotification,
+  XuiButton,
+  XuiInput,
+  XuiRadio
 }

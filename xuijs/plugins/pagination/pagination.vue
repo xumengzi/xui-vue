@@ -38,12 +38,12 @@
             @click="handlePageChange(total)"
             :class="{xui_page_invalid: selected == total}"
         >Last</span>
-        <x-input type="text" 
+        <xui-input type="text" 
             styles="xui_page_go" 
             v-if="isJumpPage == 'true'" 
             placeholder="go"
             @handleFilter="handleChoose($event)"
-        ></x-input>
+        ></xui-input>
         <span class="xui_page_initial" v-if="isShowNum == 'true'">{{selected}}/{{total}}</span>
     </div>
 </template>

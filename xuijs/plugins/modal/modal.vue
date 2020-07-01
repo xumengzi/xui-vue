@@ -7,21 +7,20 @@
                 <div class="tips">{{opts.text}}</div>
             </div>
             <div class="xui_btn_box">
-                <x-button type="cancel"
+                <xui-button type="cancel"
                     v-if="opts.cancelBtn"
                     @click="handleCancel"
-                >{{cancel}}</x-button>
-                <x-button type="default"
+                >{{cancel}}</xui-button>
+                <xui-button type="default"
                     v-if="opts.confirmBtn"
                     @click="handleConfirm"
-                >{{confirm}}</x-button>
+                >{{confirm}}</xui-button>
             </div>
         </div>
 	</div>
 </template>
 
 <script type="text/javascript">
-import XButton from '../form/button.vue';
 
 export default{
 	name: 'xui_modal',
@@ -56,7 +55,6 @@ export default{
 		}
 	},
     components: {
-        XButton
     }
 }
 </script>

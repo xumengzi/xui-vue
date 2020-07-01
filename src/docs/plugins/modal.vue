@@ -16,17 +16,16 @@
             </ul>
             <h3>效果展示</h3>
             <p>1.先来看看简单的效果,仅仅是弹个框</p>
-            <x-button type="default" @click="modal1">试试看</x-button>
+            <xui-button type="default" @click="modal1">试试看</xui-button>
             <codes :codes="modal_1"></codes>
             <p>2.有些时候,我们的场景不太一样,PM不想要那个要右上角那个关闭按钮</p>
-            <x-button type="default" @click="modal2">试试看</x-button>
+            <xui-button type="default" @click="modal2">试试看</xui-button>
             <codes :codes="modal_2"></codes>
         </div>
     </div>
 </template>
 
 <script type="text/javascript">
-import XButton from '@/plugins/form/button.vue';
 import Codes from '@/assets/codes.vue';
 
 export default {
@@ -80,9 +79,6 @@ this.$modal({
 
         }
     },
-    mounted(){
-        this.$nextTick(function(){})
-    },
     methods:{
         modal1(){
             this.$modal({
@@ -112,7 +108,6 @@ this.$modal({
         },
     },
     components:{
-        XButton,
         Codes
     }
 };

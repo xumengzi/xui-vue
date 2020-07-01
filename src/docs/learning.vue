@@ -8,8 +8,8 @@
             <p>3.img出错的时候,可以这样写'@error'.</p>
             <codes :codes="loadImg"></codes>
             <p>
-              这样当图片请求错误就能使用默认的图片了, 欢迎使用自定义指令
-              <a href="#/Directive">v-loadimg</a>
+                这样当图片请求错误就能使用默认的图片了, 欢迎使用自定义指令
+                <a href="#/Directive">v-loadimg</a>
             </p>
             <p>4.打包的时候发现图片路径不对,可以去config里面的配置里看看,是不是build里面的assetsPublicPath问题呢?</p>
             <p>5.有些时候, 比如在详情页里, 最让我头疼的是: 数据是异步的,所以你只能把数据实现全部定义好, 真是麻烦. 定义好了还算可以解决. 但是碰到有些问题,比如我需要一个倒计时,那么我肯定引入一个倒计时组件,那么页面渲染的时候传过去的时间为0(事先定义好的), 然后数据接收到了再更改时间. 但是此时倒计时并不能走. 解决办法是给倒计时组件的div加一个v-if, 时间为0的时候不展示, 等时间获取到了在展示. 完美解决问题.</p>
@@ -41,10 +41,6 @@ scrollBehavior(to, from, savePosition){
 }
 `,
         }
-    },
-    mounted(){
-      this.$nextTick(function(){
-      })
     },
     components:{
         Codes,

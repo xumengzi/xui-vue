@@ -14,16 +14,15 @@
         </ul>
         <h3>效果展示</h3>
         <p>1.按照惯例, 先举一个简单例子</p>
-        <x-button type="default" @click="change(-1)">上一个月</x-button>
+        <xui-button type="default" @click="change(-1)">上一个月</xui-button>
         <span>当前月份: {{currentDate}}</span>
-        <x-button type="default" @click="change(1)">下一个月</x-button>
+        <xui-button type="default" @click="change(1)">下一个月</xui-button>
         <xui-calender :currentDate="currentDate" @sendCurrentDate="getCurrentDate"/>
 		</div>
 	</div>
 </template>
 
 <script>
-import XButton from '@/plugins/form/button.vue';
 import Codes from '@/assets/codes.vue';
 export default {
 	name: 'calender',
@@ -95,8 +94,6 @@ import XCanlender from '@/plugins/calender/calender.vue';
 	},
 	components:{
     Codes,
-    // Calender,
-    XButton
 	}
 }
 </script>

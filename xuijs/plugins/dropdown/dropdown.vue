@@ -1,17 +1,17 @@
 <template>
 	<div class="xui_drop_down" v-clickoutside="handleClickOutSide">
-		<x-button
+		<xui-button
             styles="xui_drop_btn"
             @click="handleShowLi"
             :data-value="currentValue"
-        >{{currentName}}</x-button>
+        >{{currentName}}</xui-button>
 		<ul class="xui_drop_list" v-show="isShowLi">
-            <x-input type="text" 
+            <xui-input type="text" 
                 :placeholder="placeholder" 
                 v-show="isSearch" 
                 styles="xui_input_search"
                 @handleFilter="filter($event)"
-            ></x-input>
+            ></xui-input>
 			<li :value="item.value"
                 v-for="(item, index) in dataList"
                 :key="index"
@@ -25,8 +25,6 @@
 </template>
 
 <script type="text/javascript">
-import XButton from '@/plugins/form/button.vue';
-import XInput from '../form/input.vue';
 
 export default{
     name: 'XuiDropdown',
@@ -111,8 +109,6 @@ export default{
     },
     
 	components:{
-        XButton,
-        XInput
 	}
 }
 </script>

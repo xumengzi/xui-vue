@@ -20,13 +20,13 @@
             </ul>
             <h3>效果展示</h3>
             <p>1.默认全屏<code>loading</code></p>
-            <x-button type="default" @click="loading1">试试看</x-button>
+            <xui-button type="default" @click="loading1">试试看</xui-button>
             <codes :codes="loading_1"></codes>
             <p>2.在指定元素内<code>loading</code></p>
             <blockquote>
                 <p>tips: 一定要给你指定的元素一个<code>position:relative;</code></p>
             </blockquote>
-            <x-button type="default" @click="loading2">试试看</x-button>
+            <xui-button type="default" @click="loading2">试试看</xui-button>
             <div id="test"></div>
             <codes :codes="loading_2"></codes>
         </div>
@@ -34,7 +34,6 @@
 </template>
 
 <script type="text/javascript">
-import XButton from '@/plugins/form/button.vue';
 import Codes from '@/assets/codes.vue';
 
 export default {
@@ -45,10 +44,6 @@ export default {
             loading_1: 'this.$loading(true);',
             loading_2: 'this.$loading(true, "#test");',
         }
-    },
-    mounted(){
-        this.$nextTick(function(){
-        })
     },
     methods:{
         loading1(){
@@ -65,7 +60,6 @@ export default {
         }
     },
     components:{
-        XButton,
         Codes
     }
 };
