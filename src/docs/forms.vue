@@ -3,14 +3,14 @@
         <div class="main">
             <p class="introduce">按钮<code>button</code></p>
             <xui-button type="default">ok</xui-button>
-            <xui-button type="default" disabled="disabled">ok</xui-button>
+            <xui-button type="default" isDisabled="true">ok</xui-button>
             <xui-button type="cancel">cancel</xui-button>
-            <xui-button type="cancel" disabled="disabled">cancel</xui-button>
+            <xui-button type="cancel" isDisabled="true">cancel</xui-button>
             <codes :codes="button_1"></codes>
             <p class="introduce">输入框<code>input</code></p>
             <xui-input type="text" placeholder="请输入名字">name</xui-input>
             <xui-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-input>
-            <xui-input type="text" disabled="disabled" placeholder="请输入名字">name</xui-input>
+            <xui-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-input>
             <xui-input type="text" placeholder="请输入名字">name</xui-input>
             <xui-input type="password" placeholder="请输入密码">password</xui-input>
             <xui-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-input>
@@ -37,13 +37,13 @@ export default {
         return {
             button_1:
 `<xui-button type="default">ok</xui-button>
-<xui-button type="default" disabled="disabled">ok</xui-button>
+<xui-button type="default" isDisabled="true">ok</xui-button>
 <xui-button type="cancel">cancel</xui-button>
-<xui-button type="cancel" disabled="disabled">cancel</xui-button>`,
+<xui-button type="cancel" isDisabled="true">cancel</xui-button>`,
             input_1: 
 `<xui-input type="text" placeholder="请输入名字">name</xui-input>
 <xui-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-input>
-<xui-input type="text" disabled="disabled" placeholder="请输入名字">name</xui-input>
+<xui-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-input>
 <xui-input type="text" placeholder="请输入名字">name</xui-input>
 <xui-input type="password" placeholder="请输入密码">password</xui-input>
 <xui-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-input>`,

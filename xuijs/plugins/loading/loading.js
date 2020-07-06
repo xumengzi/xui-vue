@@ -1,20 +1,29 @@
+import Vue from 'vue';
+
 import Loading from './loading.vue';
 
-const loading = {};
-loading.install = function(Vue){
-	Vue.prototype.$loading = (isShow, pos) =>{
-		if (!isShow) {
-			document.querySelector('.xui_loading') && document.querySelector('.xui_loading').remove();
-		} else{
-			let loadingHTML = Vue.extend(Loading);
-			let loading = new loadingHTML().$mount().$el;
-			if (pos) {
-				loading.classList.add('xui_part_loading');
-				document.querySelector(pos).appendChild(loading);
-			} else{
-				document.body.appendChild(loading);
-			};
-		};
-	};
+// 构造函数
+let loadingConstructor = Vue.extend(Loading);
+loadingConstructor.prototype.close = function () {
+	this.$el.parentNode.removeChild(this.$el)
 };
-export default loading;
+
+const LoadingService = function(pos){
+	let loadingObj = new loadingConstructor()
+	let loadingEle = loadingObj.$mount().$el;
+	if (pos) {
+		loadingEle.classList.add('xui_part_loading');
+		document.querySelector(pos).appendChild(loadingEle);
+	} else {
+		loadingEle.classList.add('xui_global_loading');
+		document.body.appendChild(loadingEle);
+	};
+	return loadingObj
+}
+
+export default {
+	install(Vue) {
+		Vue.prototype.$loading = LoadingService;
+	},
+	LoadingService
+};

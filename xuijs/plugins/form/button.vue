@@ -1,6 +1,6 @@
 <template>
 	<button 
-		class='xui_btn' 
+		class='xui_btn' ref="xuiButton"
 		:class="styleType"
 		@click="handleClick"
 	>
@@ -17,14 +17,27 @@
 			}
 		},
 		props: ['type', 'styles', 'isDisabled'],
+		watch: {
+			isDisabled(){
+				this.setAttr();
+			}
+		},
 		mounted(){
 			this.$nextTick(function(){
+				this.setAttr();
 				this.type == 'default' && (this.styleType = 'xui_btn_default ');
 				this.type == 'cancel' && (this.styleType = 'xui_btn_cancel ');
 				this.styleType += this.styles || '';
 			})
 		},
 		methods:{
+			setAttr(){
+				if(this.isDisabled){
+					this.$refs.xuiButton.setAttribute('disabled', '');
+				}else{
+					this.$refs.xuiButton.removeAttribute('disabled');
+				}
+			},
 			handleClick(e){
 				this.$emit('click', e);
 			}

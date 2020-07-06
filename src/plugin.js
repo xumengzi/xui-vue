@@ -31,8 +31,9 @@ Vue.use(XuiPagination);
 Vue.use(XuiButton);
 Vue.use(XuiInput);
 Vue.use(XuiRadio);
-
 Vue.use(XuiLoading);
 Vue.use(XuiMessage);
 Vue.use(XuiModal);
 Vue.use(XuiNotification)
+
+Vue.prototype.$showLoading = XuiLoading.LoadingService

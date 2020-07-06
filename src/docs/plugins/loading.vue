@@ -7,12 +7,16 @@
             </blockquote>
             <h5 id="使用及参数说明">使用及参数说明:</h5>
             <codes :codes="params"></codes>
+            <codes :codes="params1"></codes>
+            <blockquote>
+                <p>tips: <code>loading</code>的使用分两种方法, 一种内置的<code>$loading</code>, 另一种可以自定义名字</p>
+            </blockquote>
             <ul>
                 <li>
-                    <code>boolean</code>表示是否显示<code>loading</code>,不传或者传<code>false</code>,表示删除<code>loading</code><strong>必传</strong>
+                    <code>string</code>表示<code>loading</code>显示在这个里面, 也不是全屏<code>loading</code>, 默认全屏
                 </li>
                 <li>
-                    <code>string</code>表示<code>loading</code>显示在这个里面, 也不是全屏<code>loading</code>, 默认全屏
+                    记得调<code>close</code>方法进行关闭哦
                 </li>
                 <li>
                     没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧
@@ -26,7 +30,7 @@
             <blockquote>
                 <p>tips: 一定要给你指定的元素一个<code>position:relative;</code></p>
             </blockquote>
-            <xui-button type="default" @click="loading2">试试看</xui-button>
+            <xui-button type="default" :isDisabled="isDisabled" @click="loading2">试试看</xui-button>
             <div id="test"></div>
             <codes :codes="loading_2"></codes>
         </div>
@@ -40,22 +44,36 @@ export default {
     name: 'xui-loading',
     data(){
         return{
-            params: 'this.$loading(boolean, string);',
-            loading_1: 'this.$loading(true);',
-            loading_2: 'this.$loading(true, "#test");',
+            isDisabled: false,
+            params: `Vue.use(XuiLoading);
+let golbalLoading = this.$loading();`,
+            params1: `Vue.prototype.$showLoading = XuiLoading.LoadingService
+let partLoading = this.$showLoading(string);`,
+            loading_1: `let golbalLoading = this.$loading();
+setTimeout(()=>{
+    golbalLoading.close();
+},2000);
+`,
+            loading_2: `let partLoading = this.$showLoading('#test');
+setTimeout(()=>{
+    partLoading.close();
+},2000);
+`,
         }
     },
     methods:{
         loading1(){
-            this.$loading(true);
+            let golbalLoading = this.$loading();
             setTimeout(()=>{
-                this.$loading(false);
+                golbalLoading.close();
             },2000);
         },
         loading2(){
-            this.$loading(true, '#test');
+            this.isDisabled = true;
+            let partLoading = this.$showLoading('#test');
             setTimeout(()=>{
-                this.$loading(false);
+                partLoading.close();
+                this.isDisabled = false;
             },2000);
         }
     },

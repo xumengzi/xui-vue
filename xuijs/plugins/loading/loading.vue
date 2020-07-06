@@ -1,25 +1,25 @@
 <template>
 	<div class="xui_loading">
 		<div>
-    		<div class="fence fence1"></div>
-    		<div class="fence fence2"></div>
-    		<div class="fence fence3"></div>
-    		<div class="fence fence4"></div>
-    		<div class="fence fence5"></div>
-    		<div class="fence fence6"></div>
+            <div class="fence fence1"></div>
+            <div class="fence fence2"></div>
+            <div class="fence fence3"></div>
+            <div class="fence fence4"></div>
+            <div class="fence fence5"></div>
+            <div class="fence fence6"></div>
 		</div>
 	</div>
 </template>
 
 <script type="text/javascript">
-	export default{
-		name: '',
-		data(){
-			return{
+export default{
+    name: '',
+    data(){
+        return{
 
-			}
-		}
-	}
+        }
+    }
+}
 </script>
 
 <style lang="less">
@@ -101,12 +101,12 @@
 	0%{
 		opacity: .2;
 		-webkit-transform: translateY(-100%);
-		        transform: translateY(-100%);
+        transform: translateY(-100%);
 	}
 	100%{
 		opacity: 1;
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+        transform: translateY(0%);
 	}
 }
 </style>
