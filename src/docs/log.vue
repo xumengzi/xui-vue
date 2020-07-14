@@ -1,12 +1,19 @@
 <template>
     <div class="xui-vue markdown-section">
-        <div class="main" >
+        <div class="main">
             <h1>日志</h1>
             <h6>当前版本: <span class="version">0.7.7</span></h6>
             <blockquote>
                 <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
             </blockquote>
             
+            <h3>v0.9.7  <span style="font-size: 16px;">2020/03/22</span></h3>
+            <h5>发布：</h5>
+            <p>1.增加移动端组件<a href="#/mPlugins">日历组件</a></p>
+            <blockquote>
+                <p>是否兼容现有代码：是</p>
+            </blockquote>
+
             <h3>v0.8.7  <span style="font-size: 16px;">2020/01/11</span></h3>
             <h5>发布：</h5>
             <p>1.<a href="#/Plugins/Calender">日历组件</a></p>
@@ -120,6 +127,13 @@ export default {
     data () {
         return {
             vue: 'How many codes must a man edit before you call him a master?',
+        }
+    },
+    mounted(){
+        if ('ontouchstart' in window) {
+            let tar = document.getElementById('app');
+            tar.querySelector('.test').classList.add('folded');
+            tar.querySelector('.main').classList.add('folded');
         }
     },
     components:{

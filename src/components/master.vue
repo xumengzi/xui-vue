@@ -41,6 +41,14 @@
           </ul>
         </li>
         <li>
+          <router-link to="/mPlugins">移动端插件系列</router-link>
+          <ul>
+            <li>
+              <router-link to="/mPlugins/Selector">下拉框 Selector</router-link>
+            </li>
+          </ul>
+        </li>
+        <li>
           <router-link to="/Log">日志</router-link>
         </li>
     </ul>
@@ -75,11 +83,6 @@ export default {
     }
   },
   mounted(){
-    if ('ontouchstart' in window) {
-      let tar = document.getElementById('app');
-      tar.querySelector('.test').classList.add('folded');
-      tar.querySelector('.main').classList.add('folded');
-    }
   },
   methods:{
     handleFold(){

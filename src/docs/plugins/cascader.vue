@@ -686,9 +686,11 @@ list3: [
 		}
 	},
 	mounted(){
-		this.$nextTick(function(){
-
-		})
+			if ('ontouchstart' in window) {
+					let tar = document.getElementById('app');
+					tar.querySelector('.test').classList.add('folded');
+					tar.querySelector('.main').classList.add('folded');
+			}
 	},
 	methods:{
 		getData_1(data){

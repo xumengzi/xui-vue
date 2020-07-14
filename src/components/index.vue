@@ -57,6 +57,11 @@ Vue.use(XuiDigital);`
 	},
 	mounted(){
 		this.$nextTick(function(){
+			if ('ontouchstart' in window) {
+        let tar = document.getElementById('app');
+        tar.querySelector('.test').classList.add('folded');
+        tar.querySelector('.main').classList.add('folded');
+      }
 			this.$store.commit('updateList', {
 				value: 4,
 				label: 'jquery',

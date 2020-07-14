@@ -5,6 +5,9 @@ import store from './vuex/store';
 
 import './plugin.js';
 
+import { FcSelector } from '../fcbox-m-ui/index.js';
+Vue.use(FcSelector);
+
 import directive from '@/assets/js/directive';
 Vue.use(directive);
 

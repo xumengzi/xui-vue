@@ -162,6 +162,13 @@ Vue.directive('copytoclipboard', {
             digitalScroll: `<p v-digitalScroll="999"></p>`
         }
     },
+    mounted(){
+        if ('ontouchstart' in window) {
+            let tar = document.getElementById('app');
+            tar.querySelector('.test').classList.add('folded');
+            tar.querySelector('.main').classList.add('folded');
+        }
+    },
     methods: {
         handleClick(){
             this.digiNum = Math.round(Math.random() * 1000) + 100;

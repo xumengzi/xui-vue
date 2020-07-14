@@ -72,6 +72,13 @@ tabs: [
             tab_2: '<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />',
         }
     },
+    mounted(){
+        if ('ontouchstart' in window) {
+            let tar = document.getElementById('app');
+            tar.querySelector('.test').classList.add('folded');
+            tar.querySelector('.main').classList.add('folded');
+        }
+    },
     methods: {
         callback(tar){
             console.log(tar);

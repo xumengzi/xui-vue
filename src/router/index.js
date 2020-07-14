@@ -7,6 +7,7 @@ Vue.use(Router);
 
 const _import_ = file => () => import('@/docs/' + file + '.vue');
 const _import_plugins_ = file1 => () => import('@/docs/plugins/' + file1 + '.vue');
+const _import_plugins_mobile = file1 => () => import('@/docs/mPlugins/' + file1 + '.vue');
 
 const router =  new Router({
     routes: [
@@ -109,7 +110,18 @@ const router =  new Router({
             path: '/Plugins/SliderBar',
             name: 'SliderBar',
             component: _import_plugins_('sliderBar'),
-        }
+        },
+        // 移动端组件
+        {
+            path: '/mPlugins',
+            name: 'mplugins',
+            component: _import_plugins_mobile('readme'),
+        },
+        {
+            path: '/mPlugins/Selector',
+            name: 'Selector',
+            component: _import_plugins_mobile('selector'),
+        },
     ],
     scrollBehavior(){
         return {x: 0, y: 0};

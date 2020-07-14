@@ -69,7 +69,14 @@ import XCanlender from '@/plugins/calender/calender.vue';
 				'均衡教派 电信',
 			],
 		}
-	},
+  },
+  mounted(){
+      if ('ontouchstart' in window) {
+          let tar = document.getElementById('app');
+          tar.querySelector('.test').classList.add('folded');
+          tar.querySelector('.main').classList.add('folded');
+      }
+  },
 	methods: {
     getCurrentDate(date){
       console.log('wtf',date)

@@ -42,6 +42,13 @@ scrollBehavior(to, from, savePosition){
 `,
         }
     },
+    mounted(){
+        if ('ontouchstart' in window) {
+            let tar = document.getElementById('app');
+            tar.querySelector('.test').classList.add('folded');
+            tar.querySelector('.main').classList.add('folded');
+        }
+    },
     components:{
         Codes,
     }

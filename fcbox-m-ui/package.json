@@ -1,0 +1,23 @@
+{
+  "name": "xuijs",
+  "version": "1.3.2",
+  "description": "这是一个基于vue2.0的移动ui框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xumengzi/xui-vue.git"
+  },
+  "keywords": [
+    "vuejs",
+    "xuijs"
+  ],
+  "author": "xumeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xumengzi/xui-vue/issues"
+  },
+  "homepage": "https://xumengzi.github.io/xui-vue/book/index.html#/"
+}
