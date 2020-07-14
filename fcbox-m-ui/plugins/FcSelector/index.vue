@@ -213,6 +213,7 @@ export default {
   z-index: 9999;
   animation: toToDown .3s 1 cubic-bezier(0.68, -0.55, 0.27, 1.55);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.43);
+  user-select: none;
   .fcbox-head{
     display: -webkit-box;
     display: -webkit-flex;
@@ -271,7 +272,7 @@ export default {
       left: 0;
       z-index: 3;
       width: 100%;
-      height: 44px;
+      // height: 44px;
       margin-top: -22px;
       padding: 0;
       .fcbox-item{
