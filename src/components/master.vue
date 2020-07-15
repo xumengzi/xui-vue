@@ -44,6 +44,8 @@
           <router-link to="/mPlugins">移动端插件系列</router-link>
           <ul>
             <li>
+              <router-link to="/mPlugins/Form">表单 form</router-link>
+              <router-link to="/mPlugins/Message">提示 Message</router-link>
               <router-link to="/mPlugins/Selector">下拉框 Selector</router-link>
             </li>
           </ul>

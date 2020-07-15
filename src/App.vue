@@ -42,18 +42,18 @@ body{
 .test.folded{
   transform: translateX(-300px);
 }
-.xui-vue{
+.xui-vue,.fc-vue{
     display: flex;
     align-items: end;
     overflow: hidden;
 }
-.xui-vue .main{
+.xui-vue .main,.fc-vue .main{
     flex: 1;
     padding: 40px;
     margin-left: 320px;
     transition: .3s linear;
 }
-.xui-vue .main.folded{
+.xui-vue .main.folded,.fc-vue .main.folded{
     margin-left: 0;
 }
 h1, h2 {
@@ -164,36 +164,57 @@ textarea{
   opacity: 0;
 }
 
-
-
-@media screen and (max-width: 800px) {
-  .xui-vue .main{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 40px 20px;
-  }
-}
-
 ::-webkit-scrollbar
 {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
 }
 ::-webkit-scrollbar-track-piece
 {
     background-color: #ccc;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:vertical
 {
-    height: 10px;
+    height: 6px;
     background-color: #999;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:horizontal
 {
-    width: 10px;
+    width: 6px;
     background-color: #999;
-    border-radius: 10px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 800px) {
+  .xui-vue .main,.fc-vue .main{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  ::-webkit-scrollbar
+  {
+      width: 4px;
+      height: 4px;
+  }
+  ::-webkit-scrollbar-track-piece
+  {
+      background-color: #ccc;
+      border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:vertical
+  {
+      height: 4px;
+      background-color: #999;
+      border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal
+  {
+      width: 4px;
+      background-color: #999;
+      border-radius: 4px;
+  }
 }
 </style>

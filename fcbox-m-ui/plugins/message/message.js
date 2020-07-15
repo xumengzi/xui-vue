@@ -17,7 +17,7 @@ const MessageService = function (tips = 'tips', duration = 1000, fn) {
 
 export default {
 	install(Vue) {
-		Vue.prototype.$XuiMessage = MessageService;
+		Vue.prototype.$FcMessage = MessageService;
 	},
 	MessageService
 };

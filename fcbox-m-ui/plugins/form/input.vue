@@ -1,16 +1,16 @@
 <template>
-  <div class="xui_item">
-    <label :class="{xui_input_required: isSearch}">
+  <div class="fc_item">
+    <label :class="{fc_input_required: isSearch}">
       <slot></slot>
     </label>
-    <div class="xui_content" :class="{xui_input_search: isNecessary}">
+    <div class="fc_content" :class="{fc_input_search: isNecessary}">
       <input
         :type="type"
         :readonly="readonly"
         :class="styleType"
         :disabled="disabled"
 				:value="value"
-        class="xui_input"
+        class="fc_input"
         ref="input"
         :maxlength="limit"
 				@input="handleInput"
@@ -24,7 +24,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "XuiInput",
+  name: "FcInput",
   data() {
     return {
       styleType: ""
@@ -45,7 +45,13 @@ export default {
   ],
   mounted() {
 		this.styleType += this.styles || "";
+		this.setAttr();
   },
+  watch: {
+		isDisabled(){
+			this.setAttr();
+		}
+	},
   methods: {
 		getInput() {
 			return this.$refs.input;
@@ -71,14 +77,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.xui_item {
+.fc_item {
   display: flex;
   flex-direction: initial;
   justify-content: flex-start;
   align-items: center;
 }
-.xui_content {
+.fc_content {
   position: relative;
+  margin: 10px;
+  flex: 1;
 }
 input[disabled],
 button[disabled] {
@@ -91,44 +99,43 @@ button[readonly]:focus {
   box-shadow: none;
   border-color: #dbdbdb;
 }
-.xui_input {
+.fc_input {
   position: relative;
-  width: 200px;
+  width: 100%;
   box-sizing: border-box;
-  padding: 0.37em 0.57em;
-  margin: 0.57em;
+  padding: 5px 8px;
   border: 1px solid #dbdbdb;
-  border-radius: 0.28em;
-  font-size: 1em;
+  border-radius: 4px;
+  font-size: 14px;
   line-height: 1.4;
   outline: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.xui_input:focus,
-.xui_textarea:focus {
+.fc_input:focus,
+.fc_textarea:focus {
   border-color: #87cba3;
   box-shadow: 0px 0px 0 #4eb900bd;
 }
-.xui_input_required::before {
+.fc_input_required::before {
   content: "*";
   color: red;
 }
-.xui_input_search::before {
+.fc_input_search::before {
   content: "";
   width: 20px;
   height: 20px;
   display: block;
   position: absolute;
   top: 50%;
-  left: 1em;
+  left: 4px;
   margin-top: -10px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEUAAABQUFBQUFBQUFBRUVFQUFBRUVFQUFBQUFBRUVFQUFBQUFBQUFBQUFBRUVFQUFBQUFBQUFBQUFBRUVGZ7hPRAAAAE3RSTlMAEIDA0M/woGCwcEBQIODfkDCvpc/GRgAAAKVJREFUOMu9k9kOQiEMROmUW5bLovL//6o3xiCLIb7QBxIyp52hCWprkQVg4y/55MIAXuc51W8Ces/xYia601St+Bj7L70Wm95fqI2buhyMrsO2JlSo95TY8DyEMv77BgwAsALccsJfGWIZALm3e/D9HtJikzn0lm0K5wZPzVT7H+WgMXa2H//s9Iw4tRgARlJQNCVU9HDw1/sqMa2tRFh8pKD21BMmlQQZQPOajwAAAABJRU5ErkJggg==)
     no-repeat center center;
   background-size: contain;
   z-index: 9999;
 }
-.xui_input_search .xui_input {
-  text-indent: 1.5em;
+.fc_input_search .fc_input {
+  text-indent: 16px;
 }
 </style>

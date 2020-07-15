@@ -18,8 +18,12 @@
             <li class="fcbox-item" v-if="!selectorData.length">
               <span>请选择</span>
             </li>
-            <li class="fcbox-item" v-for="(item, index) in selectorData" 
-              :key="item.value" @click="handleClick(item, index)" :class="{fcboxDisabled: item.disabled}"
+            <li
+              class="fcbox-item"
+              v-for="(item, index) in selectorData"
+              :key="item.value"
+              @click="handleClick(item, index)"
+              :class="{fcboxDisabled: item.disabled}"
             >
               <span>{{item.label}}</span>
             </li>
@@ -36,8 +40,8 @@
 
 <script>
 export default {
-  name: 'FcSelector',
-  data(){
+  name: "FcSelector",
+  data() {
     return {
       currentInx: 0,
       initHeight: 44,
@@ -46,111 +50,114 @@ export default {
       tarDiff: null,
       isShowSelect: false,
       chooseObj: undefined,
-      chooseVal: '',
-    }
+      chooseVal: ""
+    };
   },
-  props: [
-    'selectorData', 
-    'selectorValue', 
-    'tips',
-    'extralClass',
-  ],
-  mounted(){
+  props: ["selectorData", "selectorValue", "tips", "extralClass"],
+  mounted() {
     let res = this.findRes(this.selectorValue, 1);
-    if(res){
+    if (res) {
       this.chooseObj = res;
       this.chooseVal = res.label;
     }
   },
-  watch: {
-
-  },
+  watch: {},
   methods: {
-    handleTouchStart(e){
-      if(!e.touches){
-        return
+    handleTouchStart(e) {
+      if (!e.touches) {
+        return;
       }
       const { pageX, pageY } = e.touches[0];
       this.initPosY = pageY;
       this.tarDiff = this.getCurrentDis();
-      document.addEventListener('touchmove', this.touchMove);
-      document.addEventListener('touchend', this.touchEnd);
+      document.addEventListener("touchmove", this.touchMove);
+      document.addEventListener("touchend", this.touchEnd);
     },
-    findRes(target, source){
-      if(source){
-        return this.selectorData.find((item, index)=>{ return item.value == Math.abs(target)});
-      }else{
-        return this.selectorData.find((item, index)=>{ return index == Math.abs(target)});
-      };
+    findRes(target, source) {
+      if (source) {
+        return this.selectorData.find((item, index) => {
+          return item.value == Math.abs(target);
+        });
+      } else {
+        return this.selectorData.find((item, index) => {
+          return index == Math.abs(target);
+        });
+      }
     },
-    touchMove(e){
-      if(!e.touches){
-        return
+    touchMove(e) {
+      if (!e.touches) {
+        return;
       }
       const { initHeight, selectorData } = this;
       const { pageX, pageY } = e.touches[0];
-      let diff = pageY - this.initPosY
-      diff = -(this.tarDiff - diff)
+      let diff = pageY - this.initPosY;
+      diff = -(this.tarDiff - diff);
       // 边界值判断, 允许滑出最长的距离为10px
       diff = diff > 10 ? 10 : diff;
       let max = (selectorData.length - 1) * initHeight + 10;
       diff = Math.abs(diff) > max ? -max : diff;
       this.diffY = diff;
-      this.$refs.list.style.transition = '';
+      this.$refs.list.style.transition = "";
       this.$refs.list.style.transform = `translate3d(0, ${diff}px, 0)`;
     },
-    touchEnd(){
+    touchEnd() {
       let diff = Math.round(this.diffY / this.initHeight);
-      if(this.diffY > 0){
+      if (this.diffY > 0) {
         diff = -diff;
-      };
+      }
       let res = this.findRes(diff);
       this.chooseObj = res;
-      this.$refs.list.style.transition = "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-      this.$refs.list.style.transform = `translate3d(0, ${diff * this.initHeight}px, 0)`;
-      document.removeEventListener('touchmove', this.touchMove);
-      document.removeEventListener('touchend', this.touchEnd);
+      this.$refs.list.style.transition =
+        "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
+      this.$refs.list.style.transform = `translate3d(0, ${diff *
+        this.initHeight}px, 0)`;
+      document.removeEventListener("touchmove", this.touchMove);
+      document.removeEventListener("touchend", this.touchEnd);
     },
     getCurrentDis() {
       let target = getComputedStyle(this.$refs.list).transform.match(/\d+/g);
       return target ? target[target.length - 1] : null;
     },
-    handleClick(item, index){
+    handleClick(item, index) {
       this.currentInx = index;
       this.chooseObj = item;
-      this.$refs.list.style.transition = "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-      this.$refs.list.style.transform = `translate3d(0, -${index * this.initHeight}px, 0)`;
+      this.$refs.list.style.transition =
+        "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
+      this.$refs.list.style.transform = `translate3d(0, -${index *
+        this.initHeight}px, 0)`;
     },
-    handleShow(){
+    handleShow() {
       this.isShowSelect = true;
       this.setHidden(true);
     },
-    handleConfirm(){
+    handleConfirm() {
       const { chooseObj = this.selectorData[0] } = this;
-      if(chooseObj && !chooseObj.disabled){
-        this.$emit('sendChooseData', chooseObj);
+      if (chooseObj && !chooseObj.disabled) {
+        this.$emit("sendChooseData", chooseObj);
         this.chooseVal = chooseObj.label;
-      };
+      }
       this.handleCancel();
     },
-    handleCancel(){
+    handleCancel() {
       this.isShowSelect = false;
       this.setHidden(false);
     },
-    setHidden(bool){
-      document.body.style.overflow = bool ? 'hidden' : 'initial';
-      document.getElementsByTagName('html')[0].style.overflow = bool ? 'hidden' : 'initial';
-    },
+    setHidden(bool) {
+      document.body.style.overflow = bool ? "hidden" : "initial";
+      document.getElementsByTagName("html")[0].style.overflow = bool
+        ? "hidden"
+        : "initial";
+    }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
-.fcbox-container{
+.fcbox-container {
   width: 100%;
   height: 100%;
   height: 44px;
-  .fcbox-input{
+  .fcbox-input {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
@@ -162,13 +169,13 @@ export default {
     padding: 0 6px;
     box-sizing: border-box;
     z-index: 9999;
-    .fcbox-choose{
+    .fcbox-choose {
       display: block;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-    .fcbox-icon{
+    .fcbox-icon {
       width: 8px;
       height: 8px;
       position: absolute;
@@ -181,14 +188,14 @@ export default {
       transform: rotate(135deg);
       z-index: 9990;
       border-radius: 2px;
-      transition: .3s ease;
-      &.rotate{
+      transition: 0.3s ease;
+      &.rotate {
         transform: rotate(-45deg);
         margin-top: -2px;
       }
     }
   }
-  .fcbox-mask-container{
+  .fcbox-mask-container {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -196,10 +203,9 @@ export default {
     top: 0;
     z-index: 9998;
     background: transparent;
-
   }
 }
-.fcbox-selector{
+.fcbox-selector {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -211,10 +217,10 @@ export default {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   z-index: 9999;
-  animation: toToDown .3s 1 cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: toToDown 0.3s 1 cubic-bezier(0.68, -0.55, 0.27, 1.55);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.43);
   user-select: none;
-  .fcbox-head{
+  .fcbox-head {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -229,7 +235,7 @@ export default {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     z-index: 9999;
-    .fcbox-btn{
+    .fcbox-btn {
       height: 100%;
       padding: 0 16px;
       font-size: 14px;
@@ -238,13 +244,13 @@ export default {
       outline: none;
       cursor: pointer;
     }
-    .fcbox-cancel{
+    .fcbox-cancel {
       color: #969799;
     }
-    .fcbox-confirm{
+    .fcbox-confirm {
       color: #576b95;
     }
-    .fcbox-message{
+    .fcbox-message {
       max-width: 50%;
       font-weight: 500;
       font-size: 16px;
@@ -252,20 +258,20 @@ export default {
       text-align: center;
     }
   }
-  .fcbox-body{
+  .fcbox-body {
     position: relative;
     flex: 1;
     display: flex;
     overflow: hidden;
     z-index: 9999;
-    .fcbox-column{
+    .fcbox-column {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       flex: 1;
       overflow: hidden;
       font-size: 16px;
     }
-    .fcbox-list{
+    .fcbox-list {
       position: absolute;
       top: 50%;
       right: 0;
@@ -275,7 +281,7 @@ export default {
       // height: 44px;
       margin-top: -22px;
       padding: 0;
-      .fcbox-item{
+      .fcbox-item {
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
@@ -289,10 +295,10 @@ export default {
         height: 44px;
         padding: 0 10px;
         color: #000;
-        &.fcboxDisabled{
+        &.fcboxDisabled {
           color: #c0c4cc;
         }
-        span{
+        span {
           display: block;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -300,26 +306,36 @@ export default {
         }
       }
     }
-    .fcbox-mask{
+    .fcbox-mask {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 4;
       width: 100%;
       height: calc(50% - 14px);
-      background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4)), -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
-      background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4)), linear-gradient(0deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
+      background-image: -webkit-linear-gradient(
+          top,
+          hsla(0, 0%, 100%, 0.9),
+          hsla(0, 0%, 100%, 0.4)
+        ),
+        -webkit-linear-gradient(bottom, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
+      background-image: linear-gradient(
+          180deg,
+          hsla(0, 0%, 100%, 0.9),
+          hsla(0, 0%, 100%, 0.4)
+        ),
+        linear-gradient(0deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.4));
       background-repeat: no-repeat;
       background-position: top, bottom;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       pointer-events: none;
     }
-    .mask-bottom{
+    .mask-bottom {
       top: inherit;
       bottom: 0;
     }
-    .fcbox-choose{
+    .fcbox-choose {
       position: absolute;
       top: 50%;
       right: 0;
@@ -337,13 +353,13 @@ export default {
     }
   }
 }
-@keyframes toToDown{
-  0%{
-    opacity: .2;
+@keyframes toToDown {
+  0% {
+    opacity: 0.2;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
-  100%{
+  100% {
     opacity: 1;
     -webkit-transform: translateY(0%);
     transform: translateY(0%);

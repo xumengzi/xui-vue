@@ -1,5 +1,5 @@
 <template>
-  <div class="xui-vue markdown-section">
+  <div class="fc-vue markdown-section">
     <div class="main">
       <h1>message</h1>
       <blockquote>
@@ -29,13 +29,13 @@
       </ul>
       <h3>效果展示</h3>
       <p>1.我们可以就配置一些显示的文字,默认时间为1s.</p>
-      <xui-button type="default" @click="open1">试试看</xui-button>
+      <fc-button type="default" @click="open1">试试看</fc-button>
       <codes :codes="open_1"></codes>
       <p>2.当然,我们也可以修改一下显示并消失的时间</p>
-      <xui-button type="default" @click="open2">试试看</xui-button>
+      <fc-button type="default" @click="open2">试试看</fc-button>
       <codes :codes="open_2"></codes>
       <p>3.如果你想文字显示完了,加一个回调,我们也是支持的哦~</p>
-      <xui-button type="default" @click="open3">试试看</xui-button>
+      <fc-button type="default" @click="open3">试试看</fc-button>
       <codes :codes="open_3"></codes>
     </div>
   </div>
@@ -45,17 +45,17 @@
 import Codes from "@/assets/codes.vue";
 
 export default {
-  name: "show",
+  name: "Message",
   data() {
     return {
-      params: `this.$testMessage(string, time, callback) // 自定义;
-this.$XuiMessage(string, time, callback); // 默认调用方法`,
-      params1: `import XuiMessage from 'xuijs';
-Vue.use(XuiMessage);
-Vue.prototype.$testMessage = XuiMessage.MessageService;`,
-      open_1: 'this.$testMessage("hello,world")',
-      open_2: 'this.$testMessage("hello,world", 2000)',
-      open_3: `this.$testMessage(
+      params: `this.$XxMessage(string, time, callback) // 自定义;
+this.$fcMessage(string, time, callback); // 默认调用方法`,
+      params1: `import fcMessage from 'fcjs';
+Vue.use(fcMessage);
+Vue.prototype.$XxMessage = fcMessage.MessageService;`,
+      open_1: 'this.$XxMessage("hello,world")',
+      open_2: 'this.$XxMessage("hello,world", 2000)',
+      open_3: `this.$XxMessage(
   'hello, world', 
   1500, 
   function(){
@@ -73,15 +73,15 @@ Vue.prototype.$testMessage = XuiMessage.MessageService;`,
   },
   methods: {
     open1() {
-      this.$testMessage("hello,world");
+      this.$XxMessage("hello,world");
     },
     open2() {
-      this.$testMessage("hello,world", 2000);
+      this.$XxMessage("hello,world", 2000);
     },
     open3() {
       let that = this;
-      that.$testMessage("hello, world", 1500, function() {
-        that.$testMessage("callback");
+      that.$XxMessage("hello, world", 1500, function() {
+        that.$XxMessage("callback");
       });
     }
   },

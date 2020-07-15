@@ -37,3 +37,4 @@ Vue.use(XuiModal);
 Vue.use(XuiNotification)
 
 Vue.prototype.$showLoading = XuiLoading.LoadingService
+Vue.prototype.$testMessage = XuiMessage.MessageService

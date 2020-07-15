@@ -1,6 +1,6 @@
 import FcSelector from './index.vue';
 
-FcSelector.install = function(Vue){
+FcSelector.install = function (Vue) {
   Vue.component(FcSelector.name, FcSelector);
 };
 

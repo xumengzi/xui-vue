@@ -3,10 +3,10 @@ import App from './App';
 import router from './router';
 import store from './vuex/store';
 
+// 导入pc组件
 import './plugin.js';
-
-import { FcSelector } from '../fcbox-m-ui/index.js';
-Vue.use(FcSelector);
+// 导入移动端组件
+import './plugin-mobile.js';
 
 import directive from '@/assets/js/directive';
 Vue.use(directive);

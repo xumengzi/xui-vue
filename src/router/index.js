@@ -118,9 +118,19 @@ const router =  new Router({
             component: _import_plugins_mobile('readme'),
         },
         {
+            path: '/mPlugins/Form',
+            name: 'Form',
+            component: _import_plugins_mobile('forms'),
+        },
+        {
             path: '/mPlugins/Selector',
             name: 'Selector',
             component: _import_plugins_mobile('selector'),
+        },
+        {
+            path: '/mPlugins/Message',
+            name: 'Message',
+            component: _import_plugins_mobile('message'),
         },
     ],
     scrollBehavior(){
