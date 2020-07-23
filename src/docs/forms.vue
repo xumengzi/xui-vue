@@ -44,9 +44,9 @@ export default {
   name: "from",
   data() {
     return {
-      input: 'nima',
-      test: 'hello',
-      radio: 'radio_2',
+      input: "nima",
+      test: "hello",
+      radio: "radio_2",
       button_1: `<xui-button type="default">ok</xui-button>
 <xui-button type="default" isDisabled="true">ok</xui-button>
 <xui-button type="cancel">cancel</xui-button>
@@ -60,16 +60,16 @@ export default {
       radio_1: `<xui-radio name="radio_1">单选1</xui-radio>
 <xui-radio name="radio_2">单选2</xui-radio>
 <xui-radio name="radio_3">单选3</xui-radio>
-<xui-radio name="radio_4" disabled>单选4</xui-radio>`
+<xui-radio name="radio_4" disabled>单选4</xui-radio>`,
     };
   },
   watch: {
     test() {
-        console.log(this.test);
+      console.log(this.test);
     },
     radio() {
       this.$FcMessage(this.radio);
-    }
+    },
   },
   mounted() {
     if ("ontouchstart" in window) {
@@ -79,16 +79,16 @@ export default {
     }
   },
   methods: {
-    handleChange(e){
-      console.log(e)
+    handleChange(e) {
+      console.log(e);
     },
-    handleClick(){
-      this.$XxMessage('clicked');
-    }
+    handleClick() {
+      this.$XxMessage("clicked");
+    },
   },
   components: {
     master,
-    Codes
-  }
+    Codes,
+  },
 };
 </script>

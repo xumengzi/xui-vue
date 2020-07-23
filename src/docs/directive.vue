@@ -1,77 +1,114 @@
 <template>
-    <div class="xui-vue markdown-section">
-        <div class="main" >
-            <h1 id=""><code>vue</code>自定义指令</h1>
-            <blockquote>
-                <p>说明: 所有的自定义指令可以单独放到<code>main.js</code>里,全局使用</p>
-                <p>也可以放到一个专门的<code>directive.js</code>里, 然后导入即可使用</p>
-            </blockquote>
-            <h2>0.<code>directive.js</code>使用指南(推荐使用,有用的指令集合)</h2>
-            <codes :codes="allDirectives"></codes>
-            <hr>
-            <blockquote>
-                <p>说明: 以下是单个自定义指令介绍</p>
-            </blockquote>
-            <h2>1.<code>v-loadimg</code>指令</h2>
-            <blockquote>
-                <p>说明: 设置默认的图片以及404图片</p>
-            </blockquote>
-            <p>1.需要设置好默认图和404图片, 否则结果不是你想要的</p>
-            <ul>
-                <li>支持设置默认图, 不设置则不展示</li> 
-                <li>404图片可以不设置, 但是需要设置好图片错误显示文案的样式</li> 
-                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
-            </ul>
-            <codes :codes="loadimg"></codes>
-            <h2>2.<code>v-clickoutside</code>指令</h2>
-            <blockquote>
-                <p>说明: 需要点击除当前组件外关闭组件</p>
-            </blockquote>
-            <p>1.引用即可使用</p>
-            <ul>
-                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
-            </ul>
-            <codes :codes="clickoutside"></codes>
-            <h2>3.<code>v-copytoclipboard</code>指令</h2>
-            <blockquote>
-                <p>说明: 需要点击按钮或者<code>focus</code><code>input</code>时,复制对应文案</p>
-            </blockquote>
-            <p>1.引用即可使用</p>
-            <ul>
-                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
-            </ul>
-            <codes :codes="copytoclipboard"></codes>
-            <h2>4.<code>v-digitalScroll</code>指令</h2>
-            <blockquote>
-                <p>说明: 需要在展示数字的地方添加这个指令,即可给数字添加动画了</p>
-            </blockquote>
-            <p>1.引用即可使用</p>
-            <ul>
-                <li>没有你想要的功能? 快联系我: <code>xumeng0611@gmail.com</code>添加吧</li>
-            </ul>
-            <codes :codes="digitalScroll"></codes>
-            <p v-digitalScroll="digiNum"></p>
-            <xui-button type="default" @click="handleClick">change</xui-button>
-        </div>
+  <div class="xui-vue markdown-section">
+    <div class="main">
+      <h1 id>
+        <code>vue</code>自定义指令
+      </h1>
+      <blockquote>
+        <p>
+          说明: 所有的自定义指令可以单独放到
+          <code>main.js</code>里,全局使用
+        </p>
+        <p>
+          也可以放到一个专门的
+          <code>directive.js</code>里, 然后导入即可使用
+        </p>
+      </blockquote>
+      <h2>
+        0.
+        <code>directive.js</code>使用指南(推荐使用,有用的指令集合)
+      </h2>
+      <codes :codes="allDirectives"></codes>
+      <hr />
+      <blockquote>
+        <p>说明: 以下是单个自定义指令介绍</p>
+      </blockquote>
+      <h2>
+        1.
+        <code>v-loadimg</code>指令
+      </h2>
+      <blockquote>
+        <p>说明: 设置默认的图片以及404图片</p>
+      </blockquote>
+      <p>1.需要设置好默认图和404图片, 否则结果不是你想要的</p>
+      <ul>
+        <li>支持设置默认图, 不设置则不展示</li>
+        <li>404图片可以不设置, 但是需要设置好图片错误显示文案的样式</li>
+        <li>
+          没有你想要的功能? 快联系我:
+          <code>xumeng0611@gmail.com</code>添加吧
+        </li>
+      </ul>
+      <codes :codes="loadimg"></codes>
+      <h2>
+        2.
+        <code>v-clickoutside</code>指令
+      </h2>
+      <blockquote>
+        <p>说明: 需要点击除当前组件外关闭组件</p>
+      </blockquote>
+      <p>1.引用即可使用</p>
+      <ul>
+        <li>
+          没有你想要的功能? 快联系我:
+          <code>xumeng0611@gmail.com</code>添加吧
+        </li>
+      </ul>
+      <codes :codes="clickoutside"></codes>
+      <h2>
+        3.
+        <code>v-copytoclipboard</code>指令
+      </h2>
+      <blockquote>
+        <p>
+          说明: 需要点击按钮或者
+          <code>focus</code>
+          <code>input</code>时,复制对应文案
+        </p>
+      </blockquote>
+      <p>1.引用即可使用</p>
+      <ul>
+        <li>
+          没有你想要的功能? 快联系我:
+          <code>xumeng0611@gmail.com</code>添加吧
+        </li>
+      </ul>
+      <codes :codes="copytoclipboard"></codes>
+      <h2>
+        4.
+        <code>v-digitalScroll</code>指令
+      </h2>
+      <blockquote>
+        <p>说明: 需要在展示数字的地方添加这个指令,即可给数字添加动画了</p>
+      </blockquote>
+      <p>1.引用即可使用</p>
+      <ul>
+        <li>
+          没有你想要的功能? 快联系我:
+          <code>xumeng0611@gmail.com</code>添加吧
+        </li>
+      </ul>
+      <codes :codes="digitalScroll"></codes>
+      <p v-digitalScroll="digiNum"></p>
+      <xui-button type="default" @click="handleClick">change</xui-button>
     </div>
+  </div>
 </template>
 
 <script>
-import Codes from '@/assets/codes.vue';
+import Codes from "@/assets/codes.vue";
 
 export default {
-    name: 'show',
-    data () {
-        return {
-            allDirectives: 
-`//导入自定义指令js即可
+  name: "show",
+  data() {
+    return {
+      allDirectives: `//导入自定义指令js即可
 import directive from '@/assets/js/directive';
 Vue.use(directive);
 <div v-clickoutside=""></div>
 <div v-for="(item, index) in 10" :key="index"><img v-loadimg="item.url"/></div>
 `,
-            clickoutside: 
-`//you know what I mean?
+      clickoutside: `//you know what I mean?
 Vue.directive('clickoutside', {
     bind (el, binding, vnode) {
         function handleClick (e) {
@@ -91,8 +128,7 @@ Vue.directive('clickoutside', {
     }
 });
 `,
-            loadimg:
-`//导入默认图片和404图片
+      loadimg: `//导入默认图片和404图片
 let loadingImg = '';
 let notFoundImg = '';
 Vue.directive('loadImg', {
@@ -119,8 +155,7 @@ Vue.directive('loadImg', {
     },
 });
 `,
-            copytoclipboard: 
-`//支持input的focus和按钮的复制
+      copytoclipboard: `//支持input的focus和按钮的复制
 Vue.directive('copytoclipboard', {
     bind(el, binding){
         if (binding.arg == 'click') {
@@ -158,24 +193,24 @@ Vue.directive('copytoclipboard', {
     }
 })
 `,
-            digiNum: 999,
-            digitalScroll: `<p v-digitalScroll="999"></p>`
-        }
-    },
-    mounted(){
-        if ('ontouchstart' in window) {
-            let tar = document.getElementById('app');
-            tar.querySelector('.test').classList.add('folded');
-            tar.querySelector('.main').classList.add('folded');
-        }
-    },
-    methods: {
-        handleClick(){
-            this.digiNum = Math.round(Math.random() * 1000) + 100;
-        }
-    },
-    components:{
-        Codes,
+      digiNum: 999,
+      digitalScroll: `<p v-digitalScroll="999"></p>`,
+    };
+  },
+  mounted() {
+    if ("ontouchstart" in window) {
+      let tar = document.getElementById("app");
+      tar.querySelector(".test").classList.add("folded");
+      tar.querySelector(".main").classList.add("folded");
     }
-}
+  },
+  methods: {
+    handleClick() {
+      this.digiNum = Math.round(Math.random() * 1000) + 100;
+    },
+  },
+  components: {
+    Codes,
+  },
+};
 </script>

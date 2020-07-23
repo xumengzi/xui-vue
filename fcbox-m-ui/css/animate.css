@@ -1,0 +1,12 @@
+@keyframes toToDown {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}

@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import { setHidden } from "../../utils/index";
+import { cubicBezier } from "../../utils/constant";
 export default {
   name: "FcSelector",
   data() {
@@ -50,7 +52,7 @@ export default {
       tarDiff: null,
       isShowSelect: false,
       chooseObj: undefined,
-      chooseVal: ""
+      chooseVal: "",
     };
   },
   props: ["selectorData", "selectorValue", "tips", "extralClass"],
@@ -61,7 +63,6 @@ export default {
       this.chooseVal = res.label;
     }
   },
-  watch: {},
   methods: {
     handleTouchStart(e) {
       if (!e.touches) {
@@ -109,8 +110,9 @@ export default {
       this.chooseObj = res;
       this.$refs.list.style.transition =
         "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-      this.$refs.list.style.transform = `translate3d(0, ${diff *
-        this.initHeight}px, 0)`;
+      this.$refs.list.style.transform = `translate3d(0, ${
+        diff * this.initHeight
+      }px, 0)`;
       document.removeEventListener("touchmove", this.touchMove);
       document.removeEventListener("touchend", this.touchEnd);
     },
@@ -121,14 +123,14 @@ export default {
     handleClick(item, index) {
       this.currentInx = index;
       this.chooseObj = item;
-      this.$refs.list.style.transition =
-        "0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
-      this.$refs.list.style.transform = `translate3d(0, -${index *
-        this.initHeight}px, 0)`;
+      this.$refs.list.style.transition = cubicBezier;
+      this.$refs.list.style.transform = `translate3d(0, -${
+        index * this.initHeight
+      }px, 0)`;
     },
     handleShow() {
       this.isShowSelect = true;
-      this.setHidden(true);
+      setHidden(true);
     },
     handleConfirm() {
       const { chooseObj = this.selectorData[0] } = this;
@@ -140,19 +142,15 @@ export default {
     },
     handleCancel() {
       this.isShowSelect = false;
-      this.setHidden(false);
+      setHidden(false);
     },
-    setHidden(bool) {
-      document.body.style.overflow = bool ? "hidden" : "initial";
-      document.getElementsByTagName("html")[0].style.overflow = bool
-        ? "hidden"
-        : "initial";
-    }
-  }
+  },
 };
 </script>
 
 <style lang="less" scoped>
+@import '../../css/common.less';
+@import '../../css/animate.css';
 .fcbox-container {
   width: 100%;
   height: 100%;
@@ -160,7 +158,7 @@ export default {
   .fcbox-input {
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid @borderColor;
     border-radius: 3px;
     position: relative;
     display: flex;
@@ -182,9 +180,8 @@ export default {
       top: 50%;
       right: 6px;
       margin-top: -8px;
-      background: #fff;
       border: 1px solid;
-      border-color: #ccc #ccc transparent transparent;
+      border-color: @borderColor @borderColor transparent transparent;
       transform: rotate(135deg);
       z-index: 9990;
       border-radius: 2px;
@@ -213,7 +210,7 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 200px;
-  background-color: #fff;
+  background-color: @bgColor;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   z-index: 9999;
@@ -278,7 +275,6 @@ export default {
       left: 0;
       z-index: 3;
       width: 100%;
-      // height: 44px;
       margin-top: -22px;
       padding: 0;
       .fcbox-item {
@@ -351,18 +347,6 @@ export default {
       border-left: none;
       border-right: none;
     }
-  }
-}
-@keyframes toToDown {
-  0% {
-    opacity: 0.2;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
   }
 }
 </style>

@@ -103,7 +103,7 @@ selectorValue: '2',
 
 // 获取选中的值
 getChooseData(data){
-  this.$message(data.label)
+  this.$XxMessage(data.label)
 },
 `,
       select_2: 2
@@ -114,7 +114,7 @@ getChooseData(data){
       console.log(this.selectedVal);
     },
     getChooseData(data) {
-      this.$message(data.label);
+      this.$XxMessage(data.label);
     }
   },
   mounted() {

@@ -22,7 +22,15 @@ const dispatch = (componentName, eventName, params) =>{
   }
 };
 
+const setHidden = (bool) =>{
+  document.body.style.overflow = bool ? "hidden" : "initial";
+  document.getElementsByTagName("html")[0].style.overflow = bool
+    ? "hidden"
+    : "initial";
+}
+
 export {
   removeAllDom,
-  dispatch
+  dispatch,
+  setHidden
 }

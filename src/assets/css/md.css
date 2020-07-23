@@ -1,58 +1,62 @@
 blockquote {
-    margin: 0;
-    margin-bottom: .85em;
-    padding: 0 15px;
-    color: #858585;
-    border-left: 4px solid #e5e5e5;
+  margin: 0;
+  margin-bottom: .85em;
+  padding: 0 15px;
+  color: #858585;
+  border-left: 4px solid #e5e5e5;
 }
+
 .markdown-section h1 {
-    font-size: 2em
+  font-size: 2em
 }
 
 .markdown-section h2 {
-    font-size: 1.75em
+  font-size: 1.75em
 }
 
 .markdown-section h3 {
-    font-size: 1.5em
+  font-size: 1.5em
 }
 
 .markdown-section h4 {
-    font-size: 1.25em
+  font-size: 1.25em
 }
 
 .markdown-section h5 {
-    font-size: 1em
+  font-size: 1em
 }
 
 .markdown-section h6 {
-    font-size: 1em;
-    color: #777
-}
-.markdown-section > ol, .markdown-section > ul {
-    padding: 0;
-    margin: 0;
-    margin-bottom: .85em;
-    padding-left: 2em;
-}
-.markdown-section > ol li, .markdown-section > ul li,.main > ul li{
-    display: list-item;
-    margin: 4px 0;
-}
-.markdown-section a {
-    color: #4183c4;
-    text-decoration: none;
-    background: 0 0;
-    display: initial;
-    padding: 4px;
+  font-size: 1em;
+  color: #777
 }
 
-.markdown-section a:active,.markdown-section a:focus,.markdown-section a:hover {
-    outline: 0;
-    text-decoration: underline
+.markdown-section>ol, .markdown-section>ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: .85em;
+  padding-left: 2em;
+}
+
+.markdown-section>ol li, .markdown-section>ul li, .main>ul li {
+  display: list-item;
+  margin: 4px 0;
+}
+
+.markdown-section a {
+  color: #4183c4;
+  text-decoration: none;
+  background: 0 0;
+  display: initial;
+  padding: 4px;
+}
+
+.markdown-section a:active, .markdown-section a:focus, .markdown-section a:hover {
+  outline: 0;
+  text-decoration: underline
 }
 
 .markdown-section img {
-    border: 0;
-    max-width: 100%
+  border: 0;
+  max-width: 100%
 }
