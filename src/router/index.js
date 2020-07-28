@@ -129,7 +129,7 @@ const router = new Router({
     },
     {
       path: '/mPlugins/Message',
-      name: 'Message',
+      name: 'mMessage',
       component: _import_plugins_mobile('message'),
     },
   ],
