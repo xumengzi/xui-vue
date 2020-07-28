@@ -1,19 +1,25 @@
 import Vue from 'vue';
 
-// 导入插件
-import {
-  FcSelector,
-  FcMessage,
-  FcButton,
-  FcInput,
-  FcRadio
-} from '../fcbox-m-ui/index.js';
+// 全局导入插件
+import FcboxMUI from '../node_modules/fcbox-m-ui/lib/fcbox.umd';
+import '../node_modules/fcbox-m-ui/lib/fcbox.css';
 
-Vue.use(FcSelector);
-Vue.use(FcMessage);
+Vue.use(FcboxMUI);
 
-Vue.use(FcButton);
-Vue.use(FcInput);
-Vue.use(FcRadio);
+// 单个导入插件
+// import {
+//   FcSelector,
+//   FcMessage,
+//   FcButton,
+//   FcInput,
+//   FcRadio
+// } from '../node_modules/fcbox-m-ui/lib/fcbox.umd';
+// import '../node_modules/fcbox-m-ui/lib/fcbox.css';
 
-Vue.prototype.$XxMessage = FcMessage.MessageService
+// Vue.use(FcSelector);
+// Vue.use(FcMessage);
+// Vue.use(FcButton);
+// Vue.use(FcInput);
+// Vue.use(FcRadio);
+
+// Vue.prototype.$XxMessage = FcMessage.MessageService

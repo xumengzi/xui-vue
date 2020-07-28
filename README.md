@@ -85,3 +85,15 @@ Vue.prototype.$showLoading = XuiLoading.LoadingService
 9. slider
 
 ![slider](./imgs/slider.gif)
+
+
+#### 文件目录
+
+packages-mobile ->  移动端组件库
+fcbox-m-ui ->  编译后的移动端组件库
+
+fcbox-ui -> pc端组件库 todo
+
+book -> build后的文件夹
+src -> 文档说明
+imgs -> 演示图片

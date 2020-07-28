@@ -21,9 +21,15 @@ export default {
 </script>
 
 <style>
+:root {
+  --mainColor: #fff;
+  --nima: red;
+}
 body {
   padding: 0;
   margin: 0;
+  color: var(--nima);
+  background: var(--mainColor);
 }
 
 #app {

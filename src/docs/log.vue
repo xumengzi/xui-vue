@@ -11,6 +11,19 @@
       </blockquote>
 
       <h3>
+        v0.10.9
+        <span style="font-size: 16px;">2020/06/01</span>
+      </h3>
+      <h5>优化：</h5>
+      <p>
+        编译移动端组件, 支持链接引入等等
+        <a href="#/mPlugins">移动端组件</a>
+      </p>
+      <blockquote>
+        <p>是否兼容现有代码：是</p>
+      </blockquote>
+
+      <h3>
         v0.9.9
         <span style="font-size: 16px;">2020/05/11</span>
       </h3>
