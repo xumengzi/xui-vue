@@ -52,7 +52,7 @@ body {
 .xui-vue,
 .fc-vue {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   overflow: hidden;
 }
 .xui-vue .main,
