@@ -45,7 +45,7 @@
 import Codes from '@/assets/codes.vue';
 
 export default {
-    name: 'xui-loading',
+    name: 'pagination',
     data(){
         return{
             params: 

@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 module.exports = {
   runtimeCompiler: true,
   publicPath: '.',
@@ -9,6 +10,7 @@ module.exports = {
       filename: 'index.html',
     }
   },
+  // productionSourceMap: false,
   chainWebpack: config =>{
     config.module
       .rule('js')
@@ -17,5 +19,12 @@ module.exports = {
         .end()
       .use('babel')
         .loader('babel-loader')
+  },
+  configureWebpack: {
+    plugins: [
+      new webpack.BannerPlugin({
+        banner: "hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]"
+      })
+    ]
   }
-}
+};

@@ -92,8 +92,17 @@ Vue.prototype.$showLoading = XuiLoading.LoadingService
 packages-mobile ->  移动端组件库
 fcbox-m-ui ->  编译后的移动端组件库
 
-fcbox-ui -> pc端组件库 todo
+xuijs -> pc端组件库
+fcbox-ui -> 编译后pc端组件库
 
 book -> build后的文件夹
 src -> 文档说明
 imgs -> 演示图片
+
+
+
+有问题的组件
+
+rate
+pagination
+slider

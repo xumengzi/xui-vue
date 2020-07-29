@@ -1,11 +1,11 @@
-import FcSelector from './plugins/selector/index.js';
-import FcMessage from './plugins/message/message.js';
+import FcSelector from './packages/selector/index.js';
+import FcMessage from './packages/message/message.js';
 
 import {
   Button as FcButton,
   Input as FcInput,
   Radio as FcRadio
-} from './plugins/form/form.js';
+} from './packages/form/form.js';
 
 const components = [
   FcSelector,
@@ -14,13 +14,13 @@ const components = [
   FcRadio
 ];
 
-const install = function(Vue){
+const install = function (Vue) {
   // 判断是否安装
-  if(install.installed){
+  if (install.installed) {
     return;
   };
   // 注册全局组件
-  components.map(component =>{
+  components.map(component => {
     Vue.component(component.name, component);
   });
 

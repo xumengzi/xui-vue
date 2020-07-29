@@ -4,8 +4,8 @@ const removeAllDom = function(list){
       item.remove();
     })
   }
-}
+};
 
 export {
-  removeAllDom
+  removeAllDom,
 }

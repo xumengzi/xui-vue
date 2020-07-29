@@ -70,7 +70,7 @@ this.$notification({
     content: 'This is the content of the notification.',
     duration: 5000,
     fn(){
-        console.log('notification closed');
+        this.$message('notification closed');
     },
 });
 `,
@@ -85,21 +85,19 @@ this.$notification({
     },
     methods:{
         notification1(){
-            let that = this;
             this.$notification({
                 title: 'notification title',
                 content: 'This is the content of the notification.',
             });
         },
         notification2(){
-            let that = this;
             this.$notification({
                 title: 'notification title',
                 content: 'This is the content of the notification.',
                 duration: 5000,
                 btn: 'confirm',
                 fn(){
-                    that.$message('notification closed');
+                    this.$message('notification closed');
                 },
             });
         },

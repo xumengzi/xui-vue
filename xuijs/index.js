@@ -1,20 +1,54 @@
-import XuiCalender from './plugins/calender/calender.js';
-import XuiSlider from './plugins/slider/slider.js';
-import XuiCascader from './plugins/cascader/cascader.js';
-import XuiDigital from './plugins/digital/digital.js';
-import XuiTab from './plugins/tab/tab.js';
-import XuiRate from './plugins/rate/rate.js';
-import XuiPagination from './plugins/pagination/pagination.js';
-import XuiDropdown from './plugins/dropdown/dropdown.js';
-import XuiLoading from './plugins/loading/loading.js';
-import XuiMessage from './plugins/message/message.js';
-import XuiModal from './plugins/modal/modal.js';
-import XuiNotification from './plugins/notification/notification.js';
-import { 
+import XuiCalender from './packages/calender/calender.js';
+import XuiSlider from './packages/slider/slider.js';
+import XuiCascader from './packages/cascader/cascader.js';
+import XuiDigital from './packages/digital/digital.js';
+import XuiTab from './packages/tab/tab.js';
+import XuiRate from './packages/rate/rate.js';
+import XuiPagination from './packages/pagination/pagination.js';
+import XuiDropdown from './packages/dropdown/dropdown.js';
+import XuiLoading from './packages/loading/loading.js';
+import XuiMessage from './packages/message/message.js';
+import XuiModal from './packages/modal/modal.js';
+import XuiNotification from './packages/notification/notification.js';
+import {
   Button as XuiButton,
   Input as XuiInput,
   Radio as XuiRadio
-}  from './plugins/form/form.js';
+} from './packages/form/form.js';
+
+const components = [
+  XuiCalender,
+  XuiSlider,
+  XuiCascader,
+  XuiDigital,
+  XuiTab,
+  XuiRate,
+  XuiDropdown,
+  XuiPagination,
+  XuiButton,
+  XuiInput,
+  XuiRadio
+];
+
+const install = function (Vue) {
+  if (install.installed) {
+    return;
+  };
+  components.map(component => {
+    Vue.component(component.name, component)
+  });
+
+  Vue.prototype.$modal = XuiModal.ModalService;
+  Vue.prototype.$loading = XuiLoading.LoadingService;
+  Vue.prototype.$message = XuiMessage.MessageService;
+  Vue.prototype.$notification = XuiNotification.NotificationService;
+};
+
+if (typeof window !== 'window' && window.Vue) {
+  install(window.Vue);
+};
+
+export default install;
 
 export {
   XuiCalender,

@@ -46,7 +46,7 @@
 import Codes from '@/assets/codes.vue';
 
 export default {
-    name: 'show',
+    name: 'dropdown',
     data () {
         return {
             list: [

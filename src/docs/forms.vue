@@ -68,7 +68,7 @@ export default {
       console.log(this.test);
     },
     radio() {
-      this.$FcMessage(this.radio);
+      this.$message(this.radio);
     },
   },
   mounted() {
@@ -83,7 +83,7 @@ export default {
       console.log(e);
     },
     handleClick() {
-      this.$XxMessage("clicked");
+      this.$message("clicked");
     },
   },
   components: {

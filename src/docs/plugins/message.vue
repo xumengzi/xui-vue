@@ -45,17 +45,17 @@
 import Codes from "@/assets/codes.vue";
 
 export default {
-  name: "show",
+  name: "xui-message",
   data() {
     return {
-      params: `this.$testMessage(string, time, callback) // 自定义;
+      params: `this.$message(string, time, callback) // 自定义;
 this.$XuiMessage(string, time, callback); // 默认调用方法`,
       params1: `import XuiMessage from 'xuijs';
 Vue.use(XuiMessage);
-Vue.prototype.$testMessage = XuiMessage.MessageService;`,
-      open_1: 'this.$testMessage("hello,world")',
-      open_2: 'this.$testMessage("hello,world", 2000)',
-      open_3: `this.$testMessage(
+Vue.prototype.$message = XuiMessage.MessageService;`,
+      open_1: 'this.$message("hello,world")',
+      open_2: 'this.$message("hello,world", 2000)',
+      open_3: `this.$message(
   'hello, world', 
   1500, 
   function(){
@@ -73,15 +73,15 @@ Vue.prototype.$testMessage = XuiMessage.MessageService;`,
   },
   methods: {
     open1() {
-      this.$testMessage("hello,world");
+      this.$message("hello,world");
     },
     open2() {
-      this.$testMessage("hello,world", 2000);
+      this.$message("hello,world", 2000);
     },
     open3() {
       let that = this;
-      that.$testMessage("hello, world", 1500, function() {
-        that.$testMessage("callback");
+      that.$message("hello, world", 1500, function() {
+        that.$message("callback");
       });
     }
   },

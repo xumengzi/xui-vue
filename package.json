@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name fcbox --dest fcbox-m-ui/lib packages-mobile/index.js"
+    "lib-m": "vue-cli-service build --target lib --name fcbox-m --dest fcbox-m-ui/lib packages-mobile/index.js",
+    "lib-pc": "vue-cli-service build --target lib --name fcbox --dest fcbox-ui/lib xuijs/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.4",
@@ -23,6 +24,7 @@
     "@vue/cli-plugin-router": "^4.1.2",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "copy-webpack-plugin": "^6.0.3",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.21",
