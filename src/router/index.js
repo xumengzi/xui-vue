@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index.vue'
+import useage from '@/components/useage.vue'
 import master from '@/components/master.vue'
 
 Vue.use(Router);
@@ -15,6 +16,11 @@ const router = new Router({
       path: '/',
       name: 'index',
       component: index,
+    },
+    {
+      path: '/useage',
+      name: 'useage',
+      component: useage,
     },
     {
       path: '/Learning',

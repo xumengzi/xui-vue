@@ -53,7 +53,7 @@ export default {
 			return this.$refs.input;
 		},
 		handleInput(e){
-			this.$emit("input", e.target.value);
+      this.$emit("input", e.target.value);
 		},
     handleChange(e) {
       this.$emit("change", e.target.value);
@@ -62,13 +62,12 @@ export default {
       this.$emit("keyup", e.target.value);
     },
     handleKeydown(e){
-      this.$emit("keydown", e.target.value);
+      this.$emit("keydown", e);
     },
     handleFocus(e){
       this.$emit("focus", e.target.value);
     },
     handleBlur(e){
-      console.log('handleBlur')
       this.$emit("handleBlur", e.target.value);
     },
 		setAttr(){

@@ -5,7 +5,7 @@
       :checked="value == name"
       :disabled="isDisabled"
       :id="name"
-      @input="handleInput"
+      @input="handleChange"
       @change="handleChange"
       type="radio"
       name="radio"
@@ -26,14 +26,11 @@ export default {
   computed: {
     isDisabled() {
       return this.disabled;
-    }
+    },
   },
   methods: {
-    handleInput(e){
-      this.$emit('input', e.target.getAttribute('id'))
-    },
-    handleChange(e){
-      this.$emit('input', e.target.getAttribute('id'))
+    handleInput(e) {
+      this.$emit("input", e.target.getAttribute("id"));
     }
   },
 };

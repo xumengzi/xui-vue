@@ -22,11 +22,23 @@
         <li>
           <p>
             兼容性:
-            反正很厉害就是了
+            反正很厉害就是了, <code>vuejs</code>兼容到哪里我就兼容到哪里
           </p>
         </li>
       </ul>
-      <codes :codes="instructions"></codes>
+      <h5>下面展示几个例子.</h5>
+      <p>
+        <img src="../../imgs/message.gif"/>
+      </p>
+      <p>
+        <img src="../../imgs/notification.gif"/>
+      </p>
+      <p>
+        <img src="../../imgs/loading.gif"/>
+      </p>
+      <p>
+        <img src="../../imgs/modal.gif"/>
+      </p>
       <h5>个人项目,如有问题还请指出,不胜感激.</h5>
       <h5>欢迎不吝赐教</h5>
       <h6>

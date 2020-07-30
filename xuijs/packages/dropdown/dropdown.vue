@@ -11,7 +11,7 @@
         :placeholder="placeholder"
         v-show="isSearch"
         styles="xui_input_search"
-        @handleFilter="filter($event)"
+        @keyup="filter($event)"
       ></xui-input>
       <li
         :value="item.value"
@@ -19,7 +19,7 @@
         :key="index"
         @click="handleChange($event, item)"
         class="xui_drop_li"
-      >{{item.key}}</li>
+      >{{item.label}}</li>
     </ul>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
       type: Array,
       required: true,
       default: function () {
-        return [{ key: "请选择", value: "0" }];
+        return [{ label: "请选择", value: "0" }];
       },
     },
     defaultVal: {
@@ -72,7 +72,7 @@ export default {
     setValue() {
       this.currentValue = this.defaultVal;
       this.defaultVal != 0 &&
-        (this.currentName = (this.setName() && this.setName().key) || "请选择");
+        (this.currentName = (this.setName() && this.setName().label) || "请选择");
     },
     setName() {
       return this.list.filter((item, index) => {
@@ -84,12 +84,13 @@ export default {
     },
     handleChange(e, item) {
       this.selectVal.value = this.currentValue = item.value;
-      this.selectVal.key = this.currentName = item.key;
+      this.selectVal.label = this.currentName = item.label;
       this.$emit("handleChange");
       this.isShowLi = false;
     },
     filter(e) {
-      let val = e.target.value,
+      console.log(e)
+      let val = e,
         newArr = [];
       if (val == "") {
         this.dataList = this.list;
@@ -97,7 +98,7 @@ export default {
         this.dataList.filter((item) => {
           let bool =
             item.value.toString().includes(val) ||
-            item.key.toString().includes(val);
+            item.label.toString().includes(val);
           if (bool) {
             newArr.push(item);
             return item;
@@ -112,7 +113,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .xui_drop_down {
   position: relative;
   display: -webkit-box;
@@ -141,11 +142,13 @@ export default {
     padding-right: 1.57em;
     margin: 0;
   }
-  input {
-    width: 100%;
-    margin: 0.1em 0;
-    padding: 0.2em 0.4em;
-    font-size: 14px;
+  &::v-deep{
+    input {
+      width: 100%;
+      margin: 0.1em 0;
+      padding: 0.2em 0.4em;
+      font-size: 14px;
+    }
   }
   .xui_drop_btn::after {
     content: "";
@@ -181,7 +184,7 @@ export default {
     z-index: 99999;
     border: 1px #f5f5f5 solid;
     border-radius: 0 0 0.28em 0.28em;
-    max-height: 300px;
+    max-height: 250px;
     overflow: auto;
     animation: 0.2s fadeIn linear;
     -webkit-animation: 0.2s fadeIn linear;

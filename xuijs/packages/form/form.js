@@ -1,8 +1,8 @@
-import Button from './input.vue'; 
+import Button from './input.vue';
 import Input from './button.vue';
 import Radio from './radio.vue';
 
-Button.install = function(Vue){
+Button.install = function (Vue) {
   Vue.component(Button.name, Button);
 };
 

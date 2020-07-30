@@ -44,15 +44,13 @@
       styles="xui_page_go"
       v-if="isJumpPage == 'true'"
       placeholder="go"
-      @handleFilter="handleChoose($event)"
+      @keydown="handleChoose"
     ></xui-input>
     <span class="xui_page_initial" v-if="isShowNum == 'true'">{{selected}}/{{total}}</span>
   </div>
 </template>
 
 <script type="text/javascript">
-import XInput from "../form/input.vue";
-
 export default {
   name: "XuiPagination",
   data() {
@@ -126,9 +124,6 @@ export default {
         e.target.value = "";
       }
     },
-  },
-  components: {
-    XInput,
   },
 };
 </script>

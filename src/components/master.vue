@@ -12,6 +12,9 @@
         <router-link to="/">首页</router-link>
       </li>
       <li>
+        <router-link to="/useage">使用方法</router-link>
+      </li>
+      <li>
         <router-link to="/Forms">表单系列</router-link>
       </li>
       <li>

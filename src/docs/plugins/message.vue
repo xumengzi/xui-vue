@@ -9,7 +9,6 @@
         </p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params1"></codes>
       <codes :codes="params"></codes>
       <ul>
         <li>
@@ -45,11 +44,10 @@
 import Codes from "@/assets/codes.vue";
 
 export default {
-  name: "xui-message",
+  name: "message",
   data() {
     return {
-      params: `this.$message(string, time, callback) // 自定义;
-this.$XuiMessage(string, time, callback); // 默认调用方法`,
+      params: `this.$message(string, time, callback);`,
       params1: `import XuiMessage from 'xuijs';
 Vue.use(XuiMessage);
 Vue.prototype.$message = XuiMessage.MessageService;`,
