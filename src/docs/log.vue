@@ -4,10 +4,23 @@
       <h1>日志</h1>
       <h6>
         当前版本:
-        <span class="version">0.9.9</span>
+        <span class="version">0.10.10</span>
       </h6>
       <blockquote>
         <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
+      </blockquote>
+
+      <h3>
+        v0.10.10
+        <span style="font-size: 16px;">2020/06/25</span>
+      </h3>
+      <h5>优化：</h5>
+      <p>
+        编译pc组件, 支持链接引入等等
+        <a href="#/useage">pc组件</a>
+      </p>
+      <blockquote>
+        <p>是否兼容现有代码：是</p>
       </blockquote>
 
       <h3>
