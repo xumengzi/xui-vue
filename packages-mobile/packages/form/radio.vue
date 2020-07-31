@@ -18,7 +18,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "FcRadio",
+  name: "XuiMRadio",
   data() {
     return {};
   },

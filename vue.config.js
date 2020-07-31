@@ -10,12 +10,12 @@ module.exports = {
       filename: 'index.html',
     }
   },
-  // productionSourceMap: false,
+  productionSourceMap: false,
   chainWebpack: config =>{
     config.module
       .rule('js')
       .include
-        .add('/fcbox-m-ui/plugins')
+        // .add('/fcbox-m-ui/plugins')
         .end()
       .use('babel')
         .loader('babel-loader')

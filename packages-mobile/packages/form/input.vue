@@ -24,7 +24,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "FcInput",
+  name: "XuiMInput",
   data() {
     return {
       styleType: ""

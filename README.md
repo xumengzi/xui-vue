@@ -90,10 +90,10 @@ Vue.prototype.$showLoading = XuiLoading.LoadingService
 #### 文件目录
 
 packages-mobile ->  移动端组件库
-fcbox-m-ui ->  编译后的移动端组件库
+xui-m-ui ->  编译后的移动端组件库
 
-xuijs -> pc端组件库
-fcbox-ui -> 编译后pc端组件库
+packages-pc -> pc端组件库
+xui-ui -> 编译后pc端组件库
 
 book -> build后的文件夹
 src -> 文档说明

@@ -50,20 +50,20 @@ body {
   transform: translateX(-300px);
 }
 .xui-vue,
-.fc-vue {
+.xui-m-vue {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
 }
 .xui-vue .main,
-.fc-vue .main {
+.xui-m-vue .main {
   flex: 1;
   padding: 40px;
   margin-left: 320px;
   transition: 0.3s linear;
 }
 .xui-vue .main.folded,
-.fc-vue .main.folded {
+.xui-m-vue .main.folded {
   margin-left: 0;
 }
 h1,
@@ -212,7 +212,7 @@ textarea {
     filter: blur(3px) opacity(0.5);
   }
   .xui-vue .main,
-  .fc-vue .main {
+  .xui-m-vue .main {
     box-sizing: border-box;
     width: 100%;
     padding: 40px 20px;

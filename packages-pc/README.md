@@ -10,7 +10,7 @@
 
 ```javascript
 使用方法如下
-1. npm install xuijs
+1. npm install xui-ui
 
 2. 按需引入各个组件
 import Vue from 'vue';

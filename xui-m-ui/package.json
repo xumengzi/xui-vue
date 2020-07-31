@@ -1,5 +1,5 @@
 {
-  "name": "fcbox-m-ui",
+  "name": "xui-m-ui",
   "version": "0.1.0",
   "description": "基于vuejs2.0的移动ui框架, 轻便, 友好",
   "main": "index.js",

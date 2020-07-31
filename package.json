@@ -5,30 +5,28 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib-m": "vue-cli-service build --target lib --name fcbox-m --dest fcbox-m-ui/lib packages-mobile/index.js",
-    "lib-pc": "vue-cli-service build --target lib --name fcbox --dest fcbox-ui/lib xuijs/index.js"
+    "lib-m": "vue-cli-service build --target lib --name xui-m --dest xui-m-ui/lib packages-mobile/index.js",
+    "lib-pc": "vue-cli-service build --target lib --name xui --dest xui-ui/lib packages-pc/index.js",
+    "lib-all": "npm run lib-pc && npm run lib-m"
   },
   "dependencies": {
-    "core-js": "^3.4.4",
+    "core-js": "^3.6.5",
     "element": "^0.1.4",
     "element-ui": "^2.13.2",
-    "fcbox-m-ui": "^0.1.0",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1",
-    "xuijs": "file:xuijs"
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-router": "^4.1.2",
-    "@vue/cli-plugin-vuex": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-router": "^4.4.6",
+    "@vue/cli-plugin-vuex": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
     "copy-webpack-plugin": "^6.0.3",
-    "less": "^3.0.4",
+    "less": "^3.12.2",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.21",
-    "xumengzi": "^1.0.0"
+    "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
     "plugins": {

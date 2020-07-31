@@ -1,17 +1,17 @@
-import FcSelector from './packages/selector/index.js';
-import FcMessage from './packages/message/message.js';
+import XuiMSelector from './packages/selector/index.js';
+import XuiMMessage from './packages/message/message.js';
 
 import {
-  Button as FcButton,
-  Input as FcInput,
-  Radio as FcRadio
+  Button as XuiMButton,
+  Input as XuiMInput,
+  Radio as XuiMRadio
 } from './packages/form/form.js';
 
 const components = [
-  FcSelector,
-  FcButton,
-  FcInput,
-  FcRadio
+  XuiMSelector,
+  XuiMButton,
+  XuiMInput,
+  XuiMRadio
 ];
 
 const install = function (Vue) {
@@ -24,7 +24,7 @@ const install = function (Vue) {
     Vue.component(component.name, component);
   });
 
-  Vue.prototype.$XxMessage = FcMessage.MessageService
+  Vue.prototype.$message = XuiMMessage.MessageService
 }
 
 // 判断是否是直接引入文件
@@ -37,9 +37,9 @@ export default install;
 
 // 单个导出, Vue.use(xx)
 export {
-  FcSelector,
-  FcMessage,
-  FcButton,
-  FcInput,
-  FcRadio
+  XuiMSelector,
+  XuiMMessage,
+  XuiMButton,
+  XuiMInput,
+  XuiMRadio
 }

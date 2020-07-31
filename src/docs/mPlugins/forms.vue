@@ -1,35 +1,35 @@
 <template>
-  <div class="fc-vue">
+  <div class="xui-m-vue">
     <div class="main">
       <p class="introduce">
         按钮
         <code>button</code>
       </p>
-      <fc-button type="default" @click="handleClick">ok</fc-button>
-      <fc-button type="default" isDisabled="true">ok</fc-button>
-      <fc-button type="cancel">cancel</fc-button>
-      <fc-button type="cancel" isDisabled="true">cancel</fc-button>
+      <xui-m-button type="default" @click="handleClick">ok</xui-m-button>
+      <xui-m-button type="default" isDisabled="true">ok</xui-m-button>
+      <xui-m-button type="cancel">cancel</xui-m-button>
+      <xui-m-button type="cancel" isDisabled="true">cancel</xui-m-button>
       <codes :codes="button_1"></codes>
       <p class="introduce">
         输入框
         <code>input</code>
       </p>
-      <fc-input type="text" @handleChange="handleChange" v-model="test" placeholder="请输入名字">name</fc-input>
-      <fc-input type="text" readonly="readonly" placeholder="请输入名字">name</fc-input>
-      <fc-input type="text" isDisabled="true" placeholder="请输入名字">name</fc-input>
-      <fc-input type="text" placeholder="请输入名字">name</fc-input>
-      <fc-input type="password" placeholder="请输入密码">password</fc-input>
-      <fc-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</fc-input>
+      <xui-m-input type="text" @handleChange="handleChange" v-model="test" placeholder="请输入名字">name</xui-m-input>
+      <xui-m-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-m-input>
+      <xui-m-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-m-input>
+      <xui-m-input type="text" placeholder="请输入名字">name</xui-m-input>
+      <xui-m-input type="password" placeholder="请输入密码">password</xui-m-input>
+      <xui-m-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-m-input>
       <codes :codes="input_1"></codes>
       <p class="introduce">
         单选框
         <code>radio</code>
       </p>
       <div style="display:flex;">
-        <fc-radio name="radio_1" v-model="radio">单选1</fc-radio>
-        <fc-radio name="radio_2" v-model="radio">单选2</fc-radio>
-        <fc-radio name="radio_3" v-model="radio">单选3</fc-radio>
-        <fc-radio name="radio_4" disabled>单选4</fc-radio>
+        <xui-m-radio name="radio_1" v-model="radio">单选1</xui-m-radio>
+        <xui-m-radio name="radio_2" v-model="radio">单选2</xui-m-radio>
+        <xui-m-radio name="radio_3" v-model="radio">单选3</xui-m-radio>
+        <xui-m-radio name="radio_4" disabled>单选4</xui-m-radio>
       </div>
       <codes :codes="radio_1"></codes>
     </div>
@@ -47,21 +47,21 @@ export default {
       input: 'nima',
       test: 'hello',
       radio: 'radio_2',
-      button_1: `<fc-button type="default" @click="handleClick">ok</fc-button>
-<fc-button type="default" isDisabled="true">ok</fc-button>
-<fc-button type="cancel">cancel</fc-button>
-<fc-button type="cancel" isDisabled="true">cancel</fc-button>`,
-      input_1: `<fc-input type="text" placeholder="请输入名字" v-model="test">name</fc-input>
-<fc-input type="text" readonly="readonly" placeholder="请输入名字">name</fc-input>
-<fc-input type="text" isDisabled="true" placeholder="请输入名字">name</fc-input>
-<fc-input type="text" placeholder="请输入名字">name</fc-input>
-<fc-input type="password" placeholder="请输入密码">password</fc-input>
-<fc-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</fc-input>`,
+      button_1: `<xui-m-button type="default" @click="handleClick">ok</xui-m-button>
+<xui-m-button type="default" isDisabled="true">ok</xui-m-button>
+<xui-m-button type="cancel">cancel</xui-m-button>
+<xui-m-button type="cancel" isDisabled="true">cancel</xui-m-button>`,
+      input_1: `<xui-m-input type="text" placeholder="请输入名字" v-model="test">name</xui-m-input>
+<xui-m-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-m-input>
+<xui-m-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-m-input>
+<xui-m-input type="text" placeholder="请输入名字">name</xui-m-input>
+<xui-m-input type="password" placeholder="请输入密码">password</xui-m-input>
+<xui-m-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-m-input>`,
       radio_1: `radio: "radio_2"
-<fc-radio name="radio_1" v-model="radio">单选1</fc-radio>
-<fc-radio name="radio_2" v-model="radio">单选2</fc-radio>
-<fc-radio name="radio_3" v-model="radio">单选3</fc-radio>
-<fc-radio name="radio_4" v-model="radio" disabled>单选4</fc-radio>`
+<xui-m-radio name="radio_1" v-model="radio">单选1</xui-m-radio>
+<xui-m-radio name="radio_2" v-model="radio">单选2</xui-m-radio>
+<xui-m-radio name="radio_3" v-model="radio">单选3</xui-m-radio>
+<xui-m-radio name="radio_4" v-model="radio" disabled>单选4</xui-m-radio>`
     };
   },
   mounted() {
@@ -73,7 +73,7 @@ export default {
   },
   watch: {
     radio(){
-      this.$FcMessage(this.radio);
+      this.$message(this.radio);
     }
   },
   methods: {

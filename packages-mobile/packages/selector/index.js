@@ -1,7 +1,7 @@
-import FcSelector from './index.vue';
+import XuiMSelector from './index.vue';
 
-FcSelector.install = function (Vue) {
-  Vue.component(FcSelector.name, FcSelector);
+XuiMSelector.install = function (Vue) {
+  Vue.component(XuiMSelector.name, XuiMSelector);
 };
 
-export default FcSelector;
+export default XuiMSelector;

@@ -30,7 +30,7 @@
       </ul>
       <h3>效果展示</h3>
       <p>1. 先来看看一个例子吧</p>
-      <fc-selector
+      <xui-m-selector
         :selectorData="selectorData"
         :selectorValue="selectorValue"
         extralClass="hello-world"
@@ -68,10 +68,10 @@ export default {
         }
       ],
       selectorValue: "",
-      params: `import { FcSelector } from 'fcbox-m-ui';
-Vue.use(FcSelector);
+      params: `import { xui-mSelector } from 'xui-mbox-m-ui';
+Vue.use(xui-mSelector);
 
-<fc-selector 
+<xui-m-selector 
   :selectorData="selectorData" 
   :selectorValue="selectorValue"
   extralClass="hello-world"
@@ -103,7 +103,7 @@ selectorValue: '2',
 
 // 获取选中的值
 getChooseData(data){
-  this.$XxMessage(data.label)
+  this.$message(data.label)
 },
 `,
       select_2: 2
@@ -114,7 +114,7 @@ getChooseData(data){
       console.log(this.selectedVal);
     },
     getChooseData(data) {
-      this.$XxMessage(data.label);
+      this.$message(data.label);
     }
   },
   mounted() {

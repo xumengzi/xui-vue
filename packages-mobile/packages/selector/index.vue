@@ -42,7 +42,7 @@
 import { setHidden } from "../../utils/index";
 import { cubicBezier } from "../../utils/constant";
 export default {
-  name: "FcSelector",
+  name: "XuiMSelector",
   data() {
     return {
       currentInx: 0,
