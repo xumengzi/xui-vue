@@ -29,9 +29,7 @@ export default {
 	data () {
 		return {
 			params: 
-`//导入组件
-import XCanlender from '@/plugins/calender/calender.vue';
-
+`//组件使用
 <x-canlender :currentDate="currentDate" @sendCurrentDate="getCurrentDate"/>`,
       currentDate: '2020-06-01',
       imgList: [

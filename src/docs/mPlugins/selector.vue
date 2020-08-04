@@ -68,10 +68,7 @@ export default {
         }
       ],
       selectorValue: "",
-      params: `import { xui-mSelector } from 'xui-mbox-m-ui';
-Vue.use(xui-mSelector);
-
-<xui-m-selector 
+      params: `<xui-m-selector 
   :selectorData="selectorData" 
   :selectorValue="selectorValue"
   extralClass="hello-world"

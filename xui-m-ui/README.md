@@ -10,7 +10,7 @@
 
 ```javascript
 使用方法如下
-1. npm install fcbox-m-ui
+1. npm install xui-m-ui
 
 2. 按需引入各个组件
 import Vue from 'vue';
@@ -18,7 +18,7 @@ import Vue from 'vue';
 // 导入插件
 import {
   FcSelector,
-} from 'fcbox-m-ui';
+} from 'xui-m-ui';
 
 Vue.use(FcSelector);
 

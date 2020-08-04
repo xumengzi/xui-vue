@@ -66,43 +66,41 @@ export default {
           imgUrl: "http://img.infinitynewtab.com/wallpaper/2345.jpg",
         },
       ],
-      params: `//导入组件
-import XSlider from '@/plugins/slider/slider.vue';
-
+      params: `//组件使用
 <xui-slider 
-    :options="imgList"
-    animation= '.5s linear'
-    styles="hello"
-    duration="3000"
-    @change="getCurrentPic"
+  :options="imgList"
+  animation= '.5s linear'
+  styles="hello"
+  duration="3000"
+  @change="getCurrentPic"
 />
 
 imgList: [
-    {
-        link: 'https://xumeng.ink/book/',
-        imgUrl: 'http://img.infinitynewtab.com/wallpaper/1111.jpg',
-    },
-    {
-        link: 'https://github.com/xumengzi/xui-vue',
-        imgUrl: 'http://img.infinitynewtab.com/wallpaper/1234.jpg',
-    },
-    {
-        link: 'https://xumeng.site/xui-vue/index.html#/',
-        imgUrl: 'http://img.infinitynewtab.com/wallpaper/2345.jpg',
-    },
+  {
+    link: 'https://xumeng.ink/book/',
+    imgUrl: 'http://img.infinitynewtab.com/wallpaper/1111.jpg',
+  },
+  {
+    link: 'https://github.com/xumengzi/xui-vue',
+    imgUrl: 'http://img.infinitynewtab.com/wallpaper/1234.jpg',
+  },
+  {
+    link: 'https://xumeng.site/xui-vue/index.html#/',
+    imgUrl: 'http://img.infinitynewtab.com/wallpaper/2345.jpg',
+  },
 ],
 
 //回调
 getCurrentPic(data){
-    console.log(data);
+  console.log(data);
 }
 `,
       slider_1: `<xui-slider 
-    :options="imgList"
-    animation= '.5s linear'
-    styles="hello"
-    duration="3000"
-    @change="getCurrentPic"
+  :options="imgList"
+  animation= '.5s linear'
+  styles="hello"
+  duration="3000"
+  @change="getCurrentPic"
 />
 `,
     };

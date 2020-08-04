@@ -9,7 +9,7 @@
       <ul>
         <li>
           <p>
-            全局引入组件库:<code>FcboxUI</code>
+            全局引入组件库:<code>XuiUI</code>
           </p>
         </li>
       </ul>
@@ -17,11 +17,11 @@
       <ul>
         <li>
           <p>
-            按需加载组件库:<code>FcboxUI</code>
+            按需加载组件库:<code>XuiUI</code>
           </p>
         </li>
       </ul>
-      <codes :codes="instructions"></codes>
+      <codes :codes="instructions1"></codes>
       <h5>个人项目,如有问题还请指出,不胜感激.</h5>
       <h5>欢迎不吝赐教</h5>
       <h6>
@@ -44,11 +44,37 @@ export default {
     return {
       msg: "Welcome to my xui-vue App",
       introduce: "How many codes must a man edit before you call him a master?",
-      instructions: `npm install fcbox-ui
+      instructions: `npm install xui-ui
 // main.js
-import FcboxUI from '../fcbox-ui/lib/fcbox.umd';
-import '../fcbox-ui/lib/fcbox.css';
-Vue.use(FcboxUI);`,
+import XuiUI from '../xui-ui/lib/fcbox.umd';
+import '../xui-ui/lib/fcbox.css';
+Vue.use(XuiUI);`,
+      instructions1: `npm install xui-ui
+// main.js
+import {
+  XuiCalender,
+  XuiSlider,
+  XuiCascader,
+  XuiDigital,
+  XuiTab,
+  XuiRate,
+  XuiDropdown,
+  XuiPagination,
+  XuiLoading,
+  XuiMessage,
+  XuiModal,
+  XuiNotification,
+  XuiButton,
+  XuiInput,
+  XuiRadio
+} from '../xui-ui/lib/fcbox.umd';
+import '../xui-ui/lib/fcbox.css';
+Vue.use(XuiCalender);
+...
+
+Vue.prototype.test = XuiMessage.MessageService // message
+...`,
+
     };
   },
   mounted() {

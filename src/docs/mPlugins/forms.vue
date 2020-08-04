@@ -81,7 +81,7 @@ export default {
       console.log(e)
     },
     handleClick(){
-      this.$XxMessage('clicked');
+      this.$message('clicked');
     }
   },
   components: {

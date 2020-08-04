@@ -7,7 +7,6 @@
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
       <codes :codes="params"></codes>
-      <codes :codes="params1"></codes>
       <blockquote>
         <p>
           tips:
@@ -62,18 +61,16 @@ export default {
   data() {
     return {
       isDisabled: false,
-      params: `Vue.use(XuiLoading);
-let golbalLoading = this.$loading();`,
-      params1: `Vue.prototype.$loading = XuiLoading.LoadingService
-let partLoading = this.$loading(string);`,
+      params: `let loading = this.$loading(string);
+loading.close();`,
       loading_1: `let golbalLoading = this.$loading();
 setTimeout(()=>{
-    golbalLoading.close();
+  golbalLoading.close();
 },2000);
 `,
       loading_2: `let partLoading = this.$loading('#test');
 setTimeout(()=>{
-    partLoading.close();
+  partLoading.close();
 },2000);
 `,
     };

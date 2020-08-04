@@ -88,18 +88,18 @@ export default {
       params: `<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />
 
 tabs: [
-    {
-        title: '<em>标题1</em>',
-        content: '内容1',
-    },
-    {
-        title: '标题2',
-        content: '<p style="color:red;">我放在p标签里,字体颜色是红色</p>',
-    },
-    {
-        title: '标题3',
-        content: '内容3',
-    }
+  {
+    title: '<em>标题1</em>',
+    content: '内容1',
+  },
+  {
+    title: '标题2',
+    content: '<p style="color:red;">我放在p标签里,字体颜色是红色</p>',
+  },
+  {
+    title: '标题3',
+    content: '内容3',
+  }
 ],
 `,
       tab_1: '<xui-tab :tabList="tabs" />',

@@ -41,46 +41,43 @@ export default {
   name: "xui-loading",
   data() {
     return {
-      params: `//引用插件
-import Modal from './plugins/modal/modal.js';
-Vue.use(Modal);
-
+      params: `//组件使用
 this.$modal({
-    tips: string,
+  tips: string,
+  text: string,
+  isShowClose: boolean
+  confirmBtn: {
     text: string,
-    isShowClose: boolean
-    confirmBtn: {
-        text: 'ok',
-        fn(){
-            console.log('ok');
-        }
-    },
-    cancelBtn: {
-        text: 'cancel',
-        fn(){
-            console.log('cancel');
-        }
-    },
+    fn(){
+      console.log('ok');
+    }
+  },
+  cancelBtn: {
+    text: string,
+    fn(){
+      console.log('cancel');
+    }
+  },
 })`,
       modal_1: `this.$modal({
-    tips: 'Title',
-    text: 'some comments',
+  tips: 'Title',
+  text: 'some comments',
 })`,
       modal_2: `this.$modal({
-    tips: 'Title',
-    text: 'some comments',
-    confirmBtn: {
-        text: 'confirm',
-        fn(){
-            console.log('confirm');
-        }
-    },
-    cancelBtn: {
-        text: 'cancel',
-        fn(){
-            console.log('cancel');
-        }
-    },
+  tips: 'Title',
+  text: 'some comments',
+  confirmBtn: {
+    text: 'confirm',
+    fn(){
+      console.log('confirm');
+    }
+  },
+  cancelBtn: {
+    text: 'cancel',
+    fn(){
+      console.log('cancel');
+    }
+  },
 })`,
     };
   },

@@ -68,8 +68,7 @@ export default {
   name: "pagination",
   data() {
     return {
-      params: 
-`<xui-pagination 
+      params: `<xui-pagination 
   :index="3"
   :total="10"
   isShowDot="true"
@@ -80,17 +79,15 @@ export default {
 
 //对应的回调
 test(inx){
-    console.log(inx);
+  console.log(inx);
 }`,
-      page_1: 
-`<xui-pagination 
+      page_1: `<xui-pagination 
   :index="3"
   :total="10"
   @click="test"
 ></xui-pagination>
 `,
-      page_2: 
-`<xui-pagination 
+      page_2: `<xui-pagination 
   :index="2"
   :total="10"
   isShowDot="true"

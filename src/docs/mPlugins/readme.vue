@@ -44,11 +44,11 @@ export default {
   data(){
     return{
       instructions: `使用方法如下
-1. npm i fcbox-m-ui
+1. npm i xui-m-ui
 
 全局导入插件
-2. import FcboxMUI from 'fcbox-m-ui/lib/fcbox.umd';
-import 'fcbox-m-ui/lib/fcbox.css';
+2. import FcboxMUI from 'xui-m-ui/lib/fcbox.umd';
+import 'xui-m-ui/lib/fcbox.css';
 
 
 Vue.use(FcboxMUI);
@@ -60,7 +60,7 @@ import {
   FcButton,
   FcInput,
   FcRadio
-} from 'fcbox-m-ui/lib/fcbox.umd';
+} from 'xui-m-ui/lib/fcbox.umd';
 
 Vue.use(FcSelector);
 Vue.use(FcMessage);
@@ -68,7 +68,7 @@ Vue.use(FcButton);
 Vue.use(FcInput);
 Vue.use(FcRadio);
 
-Vue.prototype.$XxMessage = FcMessage.MessageService`,
+Vue.prototype.message = FcMessage.MessageService`,
     }
   },
   components:{

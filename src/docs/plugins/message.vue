@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       params: `this.$message(string, time, callback);`,
-      params1: `import XuiMessage from 'xuijs';
+      params1: `import XuiMessage from 'xui-ui';
 Vue.use(XuiMessage);
 Vue.prototype.$message = XuiMessage.MessageService;`,
       open_1: 'this.$message("hello,world")',

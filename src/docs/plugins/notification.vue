@@ -47,25 +47,25 @@ export default {
   data() {
     return {
       params: `this.$notification({
-    title: string,
-    content: string,
-    duration: number,
-    btn: string,
-    fn: callback,
+  title: string,
+  content: string,
+  duration: number,
+  btn: string,
+  fn: callback,
 });
 `,
       notification_1: `this.$notification({
-    title: 'notification title',
-    content: 'This is the content of the notification.',
+  title: 'notification title',
+  content: 'This is the content of the notification.',
 });
 `,
       notification_2: `this.$notification({
-    title: 'notification title',
-    content: 'This is the content of the notification.',
-    duration: 5000,
-    fn(){
-        this.$message('notification closed');
-    },
+  title: 'notification title',
+  content: 'This is the content of the notification.',
+  duration: 5000,
+  fn(){
+    this.$message('notification closed');
+  },
 });
 `,
     };

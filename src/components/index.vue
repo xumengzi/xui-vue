@@ -64,7 +64,7 @@ export default {
       msg: "Welcome to my xui-vue App",
       introduce: "How many codes must a man edit before you call him a master?",
       instructions: `使用方法如下
-1. npm install xuijs
+1. npm install xui-ui
 
 2. 按需引入各个组件
 import {
@@ -72,7 +72,7 @@ import {
   XuiSlider,
   XuiCascader,
   XuiDigital
-} from 'xuijs';
+} from 'xui-ui';
 
 Vue.use(XuiCalender);
 Vue.use(XuiSlider);

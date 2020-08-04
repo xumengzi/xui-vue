@@ -1,6 +1,6 @@
 # xui-vue
 
-### 项目名称: [xuijs](https://github.com/xumengzi/xui-vue)
+### 项目名称: [xui-ui](https://github.com/xumengzi/xui-vue)
 
 #### 一个基于 `vueJs2.0`,可以提供丰富的方法, 组件, 插件的项目.
 
@@ -12,7 +12,7 @@
 
 ```javascript
 使用方法如下
-1. npm install xuijs
+1. npm install xui-ui
 
 2. 按需引入各个组件
 import Vue from 'vue';
@@ -30,7 +30,7 @@ import {
   XuiMessage,
   XuiModal,
   XuiNotification
-} from 'xuijs';
+} from 'xui-ui';
 
 Vue.use(XuiCalender);
 Vue.use(XuiSlider);

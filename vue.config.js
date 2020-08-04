@@ -15,7 +15,7 @@ module.exports = {
     config.module
       .rule('js')
       .include
-        // .add('/fcbox-m-ui/plugins')
+        // .add('/xui-m-ui/plugins')
         .end()
       .use('babel')
         .loader('babel-loader')

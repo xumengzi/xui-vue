@@ -1,4 +1,4 @@
-### 项目名称: [xuijs](https://github.com/xumengzi/xui-vue)
+### 项目名称: [xui-ui](https://github.com/xumengzi/xui-vue)
 
 #### 一个基于vueJs2.0,可以提供丰富的方法,组件,插件的移动ui库.
 
@@ -10,7 +10,7 @@
 
 ```javascript
 使用方法如下
-1. npm install fcbox-m-ui
+1. npm install xui-m-ui
 
 2. 按需引入各个组件
 import Vue from 'vue';
@@ -18,7 +18,7 @@ import Vue from 'vue';
 // 导入插件
 import {
   FcSelector,
-} from 'fcbox-m-ui';
+} from 'xui-m-ui';
 
 Vue.use(FcSelector);
 

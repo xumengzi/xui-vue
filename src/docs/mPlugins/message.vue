@@ -9,7 +9,7 @@
         </p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params1"></codes>
+      <!-- <codes :codes="params1"></codes> -->
       <codes :codes="params"></codes>
       <ul>
         <li>
@@ -48,14 +48,13 @@ export default {
   name: "Message",
   data() {
     return {
-      params: `this.$XuiMMessage(string, time, callback) // 自定义;
-this.$xui-mMessage(string, time, callback); // 默认调用方法`,
+      params: `this.$message(string, time, callback)`,
       params1: `import xui-mMessage from 'xui-mjs';
 Vue.use(xui-mMessage);
-Vue.prototype.$XuiMMessage = xui-mMessage.MessageService;`,
-      open_1: 'this.$XuiMMessage("hello,world")',
-      open_2: 'this.$XuiMMessage("hello,world", 2000)',
-      open_3: `this.$XuiMMessage(
+Vue.prototype.$message = xui-mMessage.MessageService;`,
+      open_1: 'this.$message("hello,world")',
+      open_2: 'this.$message("hello,world", 2000)',
+      open_3: `this.$message(
   'hello, world', 
   1500, 
   function(){
@@ -73,15 +72,15 @@ Vue.prototype.$XuiMMessage = xui-mMessage.MessageService;`,
   },
   methods: {
     open1() {
-      this.$XuiMMessage("hello,world");
+      this.$message("hello,world");
     },
     open2() {
-      this.$XuiMMessage("hello,world", 2000);
+      this.$message("hello,world", 2000);
     },
     open3() {
       let that = this;
-      that.$XuiMMessage("hello, world", 1500, function() {
-        that.$XuiMMessage("callback");
+      that.$message("hello, world", 1500, function() {
+        that.$message("callback");
       });
     }
   },
