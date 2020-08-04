@@ -1,7 +1,7 @@
 <template>
   <div class="xui-vue markdown-section">
     <div class="main">
-      <h1 id="插件">移动端组件库: FcboxMUI</h1>
+      <h1 id="插件">移动端组件库: XuiMUI</h1>
       <blockquote>
         <p>提示: 请在手机下查看或浏览器的手机模式下</p>
       </blockquote>
@@ -47,28 +47,28 @@ export default {
 1. npm i xui-m-ui
 
 全局导入插件
-2. import FcboxMUI from 'xui-m-ui/lib/fcbox.umd';
-import 'xui-m-ui/lib/fcbox.css';
+2. import XuiMUI from 'xui-m-ui/lib/XuiMbox.umd';
+import 'xui-m-ui/lib/XuiMbox.css';
 
-
-Vue.use(FcboxMUI);
+Vue.use(XuiMUI);
 
 或者按需引入各个组件
 import {
-  FcSelector,
-  FcMessage,
-  FcButton,
-  FcInput,
-  FcRadio
-} from 'xui-m-ui/lib/fcbox.umd';
+  XuiMSelector,
+  XuiMMessage,
+  XuiMButton,
+  XuiMInput,
+  XuiMRadio
+} from 'xui-m-ui/lib/XuiMbox.umd';
+import 'xui-m-ui/lib/XuiMbox.css';
 
-Vue.use(FcSelector);
-Vue.use(FcMessage);
-Vue.use(FcButton);
-Vue.use(FcInput);
-Vue.use(FcRadio);
+Vue.use(XuiMSelector);
+Vue.use(XuiMMessage);
+Vue.use(XuiMButton);
+Vue.use(XuiMInput);
+Vue.use(XuiMRadio);
 
-Vue.prototype.message = FcMessage.MessageService`,
+Vue.prototype.message = XuiMMessage.MessageService`,
     }
   },
   components:{
