@@ -6,7 +6,7 @@
         <p>说明: 用来提示用户,是否进行下一步操作?</p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="PoNogYE"></codes>
       <ul>
         <li>所有的参数都是非必传,如果你觉得我写的文案也不错的话</li>
         <li>

@@ -6,20 +6,21 @@
         <code>button</code>
       </p>
       <xui-button type="default" @click="handleClick">ok</xui-button>
-      <xui-button type="default" isDisabled="true">ok</xui-button>
+      <xui-button type="default" :is-disabled="isDisabled">左边按钮设置是否可以点击</xui-button>
+      <xui-button type="default" is-disabled="true">禁止点击</xui-button>
       <xui-button type="cancel">cancel</xui-button>
-      <xui-button type="cancel" isDisabled="true">cancel</xui-button>
+      <xui-button type="cancel" is-disabled="true">cancel</xui-button>
       <codes :codes="button_1"></codes>
       <p class="introduce">
         输入框
         <code>input</code>
       </p>
-      <xui-input type="text" @handleChange="handleChange" v-model="test" placeholder="请输入名字">name</xui-input>
+      <xui-input type="text" @change="handleChange" v-model="test" placeholder="请输入名字">name</xui-input>
       <xui-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-input>
-      <xui-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-input>
+      <xui-input type="text" is-disabled="true" placeholder="请输入名字">name</xui-input>
       <xui-input type="text" placeholder="请输入名字">name</xui-input>
       <xui-input type="password" placeholder="请输入密码">password</xui-input>
-      <xui-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-input>
+      <xui-input type="text" placeholder="请输入名字" isNecessary="true" is-search="true">name</xui-input>
       <codes :codes="input_1"></codes>
       <p class="introduce">
         单选框
@@ -47,19 +48,21 @@ export default {
       input: "nima",
       test: "hello",
       radio: "radio_2",
+      isDisabled: false,
       button_1: `<xui-button type="default">ok</xui-button>
-<xui-button type="default" isDisabled="true">ok</xui-button>
+<xui-button type="default" :is-disabled="isDisabled">左边按钮设置是否可以点击</xui-button>
+<xui-button type="default" is-disabled="true">禁止点击</xui-button>
 <xui-button type="cancel">cancel</xui-button>
 <xui-button type="cancel" isDisabled="true">cancel</xui-button>`,
-      input_1: `<xui-input type="text" placeholder="请输入名字">name</xui-input>
+      input_1: `<xui-input type="text" v-model="test" @change="handleChange" placeholder="请输入名字">name</xui-input>
 <xui-input type="text" readonly="readonly" placeholder="请输入名字">name</xui-input>
-<xui-input type="text" isDisabled="true" placeholder="请输入名字">name</xui-input>
+<xui-input type="text" is-disabled="true" placeholder="请输入名字">name</xui-input>
 <xui-input type="text" placeholder="请输入名字">name</xui-input>
 <xui-input type="password" placeholder="请输入密码">password</xui-input>
-<xui-input type="text" placeholder="请输入名字" isNecessary="true" isSearch="true">name</xui-input>`,
-      radio_1: `<xui-radio name="radio_1">单选1</xui-radio>
-<xui-radio name="radio_2">单选2</xui-radio>
-<xui-radio name="radio_3">单选3</xui-radio>
+<xui-input type="text" placeholder="请输入名字" isNecessary="true" is-search="true">name</xui-input>`,
+      radio_1: `<xui-radio name="radio_1" v-model="radio">单选1</xui-radio>
+<xui-radio name="radio_2" v-model="radio">单选2</xui-radio>
+<xui-radio name="radio_3" v-model="radio">单选3</xui-radio>
 <xui-radio name="radio_4" disabled>单选4</xui-radio>`,
     };
   },
@@ -80,11 +83,15 @@ export default {
   },
   methods: {
     handleChange(e) {
-      console.log(e);
+      this.$message(e);
     },
     handleClick() {
-      this.$message("clicked");
+      this.isDisabled = !this.isDisabled;
+      this.$message(this.isDisabled);
     },
+    nima(data){
+      console.log(data)
+    }
   },
   components: {
     master,

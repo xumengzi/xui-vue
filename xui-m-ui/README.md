@@ -1,4 +1,4 @@
-### 项目名称: [xuijs](https://github.com/xumengzi/xui-vue)
+### 项目名称: [XuiMUI](https://github.com/xumengzi/xui-vue)
 
 #### 一个基于vueJs2.0,可以提供丰富的方法,组件,插件的移动ui库.
 

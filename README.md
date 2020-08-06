@@ -98,11 +98,3 @@ xui-ui -> 编译后pc端组件库
 book -> build后的文件夹
 src -> 文档说明
 imgs -> 演示图片
-
-
-
-有问题的组件
-
-rate
-pagination
-slider

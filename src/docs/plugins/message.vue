@@ -9,7 +9,7 @@
         </p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="yLOLVeg"></codes>
       <ul>
         <li>
           <code>string</code>表示提示信息的文案
@@ -56,7 +56,7 @@ Vue.prototype.$message = XuiMessage.MessageService;`,
       open_3: `this.$message(
   'hello, world', 
   1500, 
-  function(){
+  ()=>{
     console.log('callback');
   }
 )`
@@ -77,9 +77,8 @@ Vue.prototype.$message = XuiMessage.MessageService;`,
       this.$message("hello,world", 2000);
     },
     open3() {
-      let that = this;
-      that.$message("hello, world", 1500, function() {
-        that.$message("callback");
+      this.$message("hello, world", 1500, ()=> {
+        this.$message("callback");
       });
     }
   },

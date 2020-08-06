@@ -6,7 +6,6 @@
       :disabled="isDisabled"
       :id="name"
       @input="handleChange"
-      @change="handleChange"
       type="radio"
       name="radio"
     />
@@ -29,7 +28,7 @@ export default {
     },
   },
   methods: {
-    handleInput(e) {
+    handleChange(e) {
       this.$emit("input", e.target.getAttribute("id"));
     }
   },

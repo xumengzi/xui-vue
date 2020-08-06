@@ -9,12 +9,13 @@ export default {
       html: "",
     };
   },
-  props: ["codes"],
+  props: ["codes", "link"],
   mounted() {
     this.$nextTick(function () {
+      const { codes, link} = this;
       let cc = "<pre><code>";
-      for (let i = 0; i < this.codes.length; i++) {
-        let z = this.codes[i],
+      for (let i = 0; i < codes.length; i++) {
+        let z = codes[i],
           reg = /([\<\>\?\/\:\[\}\{\}\'\"\-\+\=\.\;\(\)])+/;
         if (reg.test(z)) {
           cc += `<span class="codes_symbol">${z}</span>`;
@@ -22,7 +23,11 @@ export default {
           cc += `${z}`;
         }
       }
-      cc += "</code></pre>";
+      cc +=
+        "</code></pre>";
+      if(link){
+        cc += `<a href='https://codepen.io/xumengzi/pen/${link}' title='在codepen.io运行此案例' target='_blank'>在线运行</a>`;
+      };
       this.html = cc;
     });
   },
@@ -31,6 +36,7 @@ export default {
 
 <style lang="less">
 .codes {
+  position: relative;
   color: rgb(51, 51, 51);
   overflow: auto;
   word-wrap: normal;
@@ -49,6 +55,21 @@ export default {
   }
   .codes_quot {
     color: #8959a8;
+  }
+  a {
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    color: #4eb900!important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .codes {
+    a {
+      display: none;
+    }
   }
 }
 </style>

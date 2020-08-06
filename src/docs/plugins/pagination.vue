@@ -6,7 +6,7 @@
         <p>说明: 当加载/渲染所有数据将花费很多时间时,可切换页码浏览数据。</p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="zYqYXxx"></codes>
       <ul>
         <li>
           复制好相应的

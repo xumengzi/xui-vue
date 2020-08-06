@@ -6,7 +6,7 @@
         <p>说明: 用来缓解用户疲劳,提高用户等待积极性.</p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="gOrOEqx"></codes>
       <blockquote>
         <p>
           tips:

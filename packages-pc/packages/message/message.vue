@@ -5,6 +5,7 @@
 </template>
 
 <script type="text/javascript">
+import xu from '../../utils/xu';
 export default {
 	name: 'XuiMessage',
 	data(){
@@ -19,14 +20,15 @@ export default {
 			this.duration = this.$options.duration;
 			setTimeout(() =>{
 				this.$el.remove();
-				this.$options.fn && this.$options.fn();
+				const { fn } = this.$options;
+				xu.isFunction(fn) && fn.call(this)
 			}, this.duration);
 		});
 	}
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .xui_message{
 	width: 100%;
 	height: 100%;

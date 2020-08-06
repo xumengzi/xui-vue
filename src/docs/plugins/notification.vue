@@ -6,7 +6,7 @@
         <p>说明: 全局展示通知提醒信息.</p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="eYZYyZY"></codes>
       <ul>
         <li>
           <code>title</code>表示通知提醒框的标题
@@ -63,6 +63,7 @@ export default {
   title: 'notification title',
   content: 'This is the content of the notification.',
   duration: 5000,
+  btn: "confirm",
   fn(){
     this.$message('notification closed');
   },

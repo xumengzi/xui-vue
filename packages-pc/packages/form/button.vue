@@ -64,7 +64,6 @@ button[disabled] {
 }
 button.xui_btn:active {
   top: 1px;
-  /* box-shadow: none; */
 }
 button.xui_btn:disabled {
   color: #ccc;
@@ -76,7 +75,6 @@ button.xui_btn:disabled {
   color: #f8f9f8;
   border-color: #4eb900;
   background-color: #4eb900;
-  /* box-shadow: 2px 2px 6px #4eb900bd; */
 }
 .xui_btn_default:hover {
   border-color: #3b8704;
@@ -86,7 +84,6 @@ button.xui_btn:disabled {
   color: #f8f9f8;
   border-color: #fd7127;
   background-color: #fd7127;
-  /* box-shadow: 2px 2px 6px #fd7127; */
 }
 .xui_btn-secondary:hover {
   border-color: #ec580a;
@@ -101,7 +98,6 @@ button.xui_btn:disabled {
   color: #fd7127;
   border-color: #fd7127;
   background-color: #fff;
-  /* box-shadow: 2px 2px 4px #fd7127; */
 }
 .xui_btn_cancel:not(:disabled):hover {
   color: #f8f9f8;
