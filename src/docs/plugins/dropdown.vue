@@ -6,7 +6,7 @@
         <p>说明: 当选项过多时，使用下拉菜单展示并选择内容</p>
       </blockquote>
       <h5>使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="GRZryoQ"></codes>
       <ul>
         <li>
           <code>list</code>下拉框列表数据源,类型为数组
