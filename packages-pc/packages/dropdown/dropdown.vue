@@ -72,7 +72,8 @@ export default {
     setValue() {
       this.currentValue = this.defaultVal;
       this.defaultVal != 0 &&
-        (this.currentName = (this.setName() && this.setName().label) || "请选择");
+        (this.currentName =
+          (this.setName() && this.setName().label) || "请选择");
     },
     setName() {
       return this.list.filter((item, index) => {
@@ -85,11 +86,11 @@ export default {
     handleChange(e, item) {
       this.selectVal.value = this.currentValue = item.value;
       this.selectVal.label = this.currentName = item.label;
-      this.$emit("handleChange");
+      this.$emit("change", this.selectVal);
       this.isShowLi = false;
     },
     filter(e) {
-      console.log(e)
+      console.log(e);
       let val = e,
         newArr = [];
       if (val == "") {
@@ -108,8 +109,6 @@ export default {
       }
     },
   },
-
-  components: {},
 };
 </script>
 
@@ -142,7 +141,7 @@ export default {
     padding-right: 1.57em;
     margin: 0;
   }
-  &::v-deep{
+  &::v-deep {
     input {
       width: 100%;
       margin: 0.1em 0;

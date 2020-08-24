@@ -13,16 +13,16 @@
           <strong>必传</strong>
         </li>
         <li>
-          <code>selectVal</code>选中后的回调,返回选中的
+          <code>select-val</code>选中后的回调,返回选中的
           <code>label</code>和
           <code>value</code>,类型为对象
         </li>
         <li>
-          <code>defaultVal</code>默认选中的一项,类型为数字
+          <code>default-val</code>默认选中的一项,类型为数字
           <code>value</code>,默认是0
         </li>
         <li>
-          <code>isSearch</code>是否显示搜索框,默认是
+          <code>is-search</code>是否显示搜索框,默认是
           <code>false</code>
         </li>
         <li>
@@ -36,12 +36,12 @@
       </ul>
       <h3>效果展示</h3>
       <p>1.先来一个最简单的配置</p>
-      <xui-dropdown :list="list" :selectVal="selectedVal" @handleChange="showVal"></xui-dropdown>
+      <xui-dropdown :list="list" :select-val="selectedVal" @change="showVal"></xui-dropdown>
       <codes :codes="select_1"></codes>
       <p>
         2.可以默认选中一项, 设置好对应的
-        <code>defaultVal</code>值即可.这里我设置了
-        <code>isSearch</code>为
+        <code>default-val</code>值即可.这里我设置了
+        <code>is-search</code>为
         <code>true</code>所以可以展示搜索框
       </p>
       <blockquote>
@@ -53,11 +53,11 @@
       </blockquote>
       <xui-dropdown
         :list="list"
-        :selectVal="selectedVal"
-        @handleChange="showVal"
-        :isSearch="true"
+        :select-val="selectedVal"
+        @change="showVal"
+        :is-search="true"
         placeholder="type to search"
-        :defaultVal="2"
+        :default-val="2"
       ></xui-dropdown>
       <codes :codes="select_2"></codes>
     </div>
@@ -95,11 +95,11 @@ export default {
       },
       params: `<xui-dropdown
     :list="list"
-    :selectVal="selectedVal"
-    :isSearch="true"
+    :select-val="selectedVal"
+    :is-search="true"
     placeholder="type to search"
-    @handleChange="showVal"
-    :defaultVal="2"
+    @change="showVal"
+    :default-val="2"
     >
 </xui-dropdown>
 //声明好data属性等
@@ -122,25 +122,25 @@ selectedVal: {
     value: '',
 },
 //在methods里写获取选中的值的方法
-showVal(){
-    console.log(this.selectedVal);
+showVal(data){
+    console.log(this.selectedVal, data);
 }
 `,
       select_1: `<xui-dropdown
     :list="list"
-    :selectVal="selectedVal"
-    @handleChange="showVal"
+    :select-val="selectedVal"
+    @change="showVal"
 >
 </xui-dropdown>
 `,
       select_2: `//只需添加需要选中的默认值即可
 <xui-dropdown
     :list="list"
-    :selectVal="selectedVal"
-    @handleChange="showVal"
-    :isSearch="true"
+    :select-val="selectedVal"
+    @change="showVal"
+    :is-search="true"
     placeholder="type to search"
-    :defaultVal="2"
+    :default-val="2"
 >
 </xui-dropdown>
 `,
@@ -154,9 +154,9 @@ showVal(){
     }
   },
   methods: {
-    showVal() {
-      const { label, value } = this.selectedVal
-      this.$message(label + ': ' +value)
+    showVal(data) {
+      const { label, value } = data;
+      this.$message(label + ": " + value);
     },
   },
   components: {

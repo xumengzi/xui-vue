@@ -11,6 +11,18 @@
       </blockquote>
 
       <h3>
+        v0.11.13
+        <span style="font-size: 16px;">2020/08/11</span>
+      </h3>
+      <h5>优化：</h5>
+      <p>
+        <a href="#/Plugins/Dropdown">下拉框组件优化, 驼峰改为-</a>
+      </p>
+      <blockquote>
+        <p>是否兼容现有代码：否</p>
+      </blockquote>
+
+      <h3>
         v0.11.12
         <span style="font-size: 16px;">2020/08/02</span>
       </h3>

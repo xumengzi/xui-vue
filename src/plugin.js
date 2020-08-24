@@ -5,15 +5,9 @@ import '../xui-ui/lib/xui.css';
 
 Vue.use(XuiUI);
 
-// import {
-//   Button as XuiButton,
-//   Input as XuiInput,
-//   Radio as XuiRadio
-// } from '../packages-pc/packages/form/form';
+// import XuiDropdown from '../packages-pc/packages/dropdown/dropdown.js';
 
-// Vue.use(XuiButton); 
-// Vue.use(XuiInput); 
-// Vue.use(XuiRadio);
+// Vue.use(XuiDropdown); 
 
 // import directive from '../packages-pc/utils/directive';
 // Vue.use(directive);
