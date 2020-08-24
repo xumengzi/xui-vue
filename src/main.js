@@ -8,8 +8,8 @@ import './plugin.js';
 // 导入移动端组件
 import './plugin-mobile.js';
 
-import directive from '@/assets/js/directive';
-Vue.use(directive);
+// import directive from '@/assets/js/directive';
+// Vue.use(directive);
 
 import base from '@/assets/js/base';
 Vue.prototype.$base = base;

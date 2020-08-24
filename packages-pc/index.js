@@ -16,6 +16,8 @@ import {
   Radio as XuiRadio
 } from './packages/form/form.js';
 
+import directive from './utils/directive';
+
 const components = [
   XuiCalender,
   XuiSlider,
@@ -37,6 +39,8 @@ const install = function (Vue) {
   components.map(component => {
     Vue.component(component.name, component)
   });
+
+  Vue.use(directive);
 
   Vue.prototype.$modal = XuiModal.ModalService;
   Vue.prototype.$loading = XuiLoading.LoadingService;

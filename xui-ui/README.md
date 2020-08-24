@@ -9,6 +9,17 @@
 3. 兼容性: IE10及以上高级浏览器
 
 ```javascript
+npm install xui-ui
+
+import Vue from 'vue';
+
+import XuiUI from 'xui-ui/lib/xui.umd.min';
+import 'xui-ui/lib/xui.css';
+
+Vue.use(XuiUI);
+```
+
+```javascript
 使用方法如下
 1. npm install xui-ui
 

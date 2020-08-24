@@ -14,3 +14,6 @@ Vue.use(XuiUI);
 // Vue.use(XuiButton); 
 // Vue.use(XuiInput); 
 // Vue.use(XuiRadio);
+
+// import directive from '../packages-pc/utils/directive';
+// Vue.use(directive);
