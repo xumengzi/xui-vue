@@ -4,10 +4,22 @@
       <h1>日志</h1>
       <h6>
         当前版本:
-        <span class="version">0.11.12</span>
+        <span class="version">0.11.14</span>
       </h6>
       <blockquote>
         <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
+      </blockquote>
+
+      <h3>
+        v0.11.14
+        <span style="font-size: 16px;">2020/09/01</span>
+      </h3>
+      <h5>优化：</h5>
+      <p>
+        <a href="#/Plugins/Digital">数字选择组件</a>增加<code>change</code>函数和<code>codepen</code>例子
+      </p>
+      <blockquote>
+        <p>是否兼容现有代码：否</p>
       </blockquote>
 
       <h3>
@@ -16,7 +28,7 @@
       </h3>
       <h5>优化：</h5>
       <p>
-        <a href="#/Plugins/Dropdown">下拉框组件优化, 驼峰改为-</a>
+        <a href="#/Plugins/Dropdown">下拉框组件</a>优化, 驼峰改为-
       </p>
       <blockquote>
         <p>是否兼容现有代码：否</p>

@@ -71,10 +71,11 @@ export default {
       this.$emit("handleBlur", e.target.value);
     },
 		setAttr(){
+      const { input } = this.$refs;
 			if(this.isDisabled){
-				this.$refs.input.setAttribute('disabled', '');
+				input.setAttribute('disabled', '');
 			}else{
-				this.$refs.input.removeAttribute('disabled');
+				input.removeAttribute('disabled');
 			}
 		},
   }
