@@ -1,5 +1,5 @@
 <template>
-  <div class="xui_tab" :class="{xui_tab_vertical: dir == 'Y'}">
+  <div class="xui_tab" :class="[dir == 'Y' ? 'xui_tab_vertical' : '', className]">
     <ul class="xui_tab_head">
       <li
         v-for="(item, index) in tabList"
@@ -62,6 +62,10 @@ export default {
       type: String,
       default: "X",
     },
+    className: {
+      type: String,
+      default: "",
+    },
   },
   created() {
     this.navIndex =
@@ -71,20 +75,21 @@ export default {
     this.navIndex = this.navIndex < 0 ? 0 : this.navIndex;
     this.dir = this.direction.toUpperCase();
   },
-  mounted() {
-    this.$nextTick(function () {});
-  },
   methods: {
     handleChangeTab(index) {
       this.navIndex = index;
-      this.$emit("change", this);
+      const params = {
+        index,
+        item: this.tabList[index],
+      };
+      this.$emit("change", params);
     },
   },
   components: {},
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .xui_tab {
   ul.xui_tab_head {
     display: -webkit-box;

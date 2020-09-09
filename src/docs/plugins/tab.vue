@@ -6,7 +6,7 @@
         <p>说明: 需要展示多个栏目以及节省空间的时候</p>
       </blockquote>
       <h5 id="使用及参数说明">使用及参数说明:</h5>
-      <codes :codes="params"></codes>
+      <codes :codes="params" link="qBZxJMG"></codes>
       <ul>
         <li>
           <code>tabList</code>切换数据列表
@@ -25,9 +25,13 @@
           <code>Number</code>
         </li>
         <li>
-          <code>change</code>切换的回调,返回的是
-          <code>this</code>
-          <code>Function</code>
+          <code>className</code>自定义类名
+          <code>String</code>
+        </li>
+        <li>
+          <code>change</code>切换的回调,返回的是一个对象, 包含索引值和每一项
+          <code>index</code>
+          <code>item</code>
         </li>
         <li>
           没有你想要的功能? 快联系我:
@@ -42,10 +46,10 @@
       <blockquote>
         <p>说明: 标题和内容均支持标签,样式等</p>
       </blockquote>
-      <xui-tab :tabList="tabs" />
+      <xui-tab :tabList="tabs" className="helloworld" />
       <codes :codes="tab_1"></codes>
       <p>2.让我们来增加一些参数, 让tab更灵活</p>
-      <xui-tab :tabList="tabs" :direction="vertical" :activeIndex="-3" @change="callback($event)" />
+      <xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="getVal" />
       <codes :codes="tab_2"></codes>
     </div>
   </div>
@@ -85,7 +89,7 @@ export default {
         },
       ],
       vertical: "y",
-      params: `<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />
+      params: `<xui-tab :tabList="tabs" className="" :direction="vertical" :activeIndex="1" @change="getVal" />
 
 tabs: [
   {
@@ -102,9 +106,9 @@ tabs: [
   }
 ],
 `,
-      tab_1: '<xui-tab :tabList="tabs" />',
+      tab_1: '<xui-tab :tabList="tabs" className="helloworld"/>',
       tab_2:
-        '<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="callback($event)" />',
+        '<xui-tab :tabList="tabs" :direction="vertical" :activeIndex="1" @change="getVal" />',
     };
   },
   mounted() {
@@ -115,9 +119,9 @@ tabs: [
     }
   },
   methods: {
-    callback(tar) {
-      console.log(tar);
-    },
+    getVal(tar) {
+      this.$message(tar.index, 500);
+    }
   },
   components: {
     Codes,

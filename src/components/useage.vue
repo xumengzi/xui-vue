@@ -9,12 +9,12 @@
       <ul>
         <li>
           <p>
-            以外链的形式加载组件库
+            以外链的形式加载组件库,非常的轻量级
           </p>
         </li>
       </ul>
-      <codes :codes="link"></codes>
       <codes :codes="gzip"></codes>
+      <codes :codes="gzipcss"></codes>
       <ul>
         <li>
           <p>
@@ -52,8 +52,12 @@ export default {
   data() {
     return {
       msg: "Welcome to my xui-vue App",
-      link: 'https://unpkg.com/xui-ui@^1/lib/xui.umd.js',
-      gzip: 'https://unpkg.com/xui-ui@^1/lib/xui.umd.min.js',
+      link: `16.8kb
+https://unpkg.com/xui-ui@^1/lib/xui.umd.js`,
+      gzip: `9.5kb
+https://unpkg.com/xui-ui@^1/lib/xui.umd.min.js`,
+gzipcss: `5.1kb
+@import url(//unpkg.com/xui-ui@^1/lib/xui.css);`,
       introduce: "How many codes must a man edit before you call him a master?",
       instructions: `npm install xui-ui
 // main.js

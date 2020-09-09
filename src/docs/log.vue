@@ -4,10 +4,22 @@
       <h1>日志</h1>
       <h6>
         当前版本:
-        <span class="version">0.11.14</span>
+        <span class="version">0.11.15</span>
       </h6>
       <blockquote>
         <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
+      </blockquote>
+
+      <h3>
+        v0.11.15
+        <span style="font-size: 16px;">2020/09/11</span>
+      </h3>
+      <h5>优化：</h5>
+      <p>
+        <a href="#/Plugins/Tab"><code>Tab</code>选择组件</a>增加自定义类名参数<code>className</code>
+      </p>
+      <blockquote>
+        <p>是否兼容现有代码：是</p>
       </blockquote>
 
       <h3>

@@ -5,9 +5,9 @@ import '../xui-ui/lib/xui.css';
 
 Vue.use(XuiUI);
 
-import XuiDigital from '../packages-pc/packages/digital/digital.js';
+import XuiTab from '../packages-pc/packages/tab/tab.js';
 
-Vue.use(XuiDigital); 
+Vue.use(XuiTab); 
 
 // import {
 //   Input as XuiInput,
