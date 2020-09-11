@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>http 状态码考试</title>
+  <link rel="stylesheet" href="https://unpkg.com/xui-ui@1.3.12/lib/xui.css">
+  <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://unpkg.com/xui-ui@1.3.12/lib/xui.umd.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>当前得分: {{score}} (答对加2分, 答错扣2分)</p>
+    <p>题目http状态码: code的意思是?</p>
+    subject
+  </div>
+  <script>
+    var Main = {
+      data() {
+        return {
+          score: 0,
+          radio: "",
+          trueAnswer: "",
+        };
+      },
+      mounted() {
+        this.score = localStorage.getItem('score') || 0;
+      },
+      watch: {
+        radio() {
+          let str = `正确答案是: ${this.trueAnswer}`
+          if(this.radio === this.trueAnswer){
+            this.$message('回答正确', 1500, ()=>{
+              location.reload();
+            });
+            this.score -= 0;
+            this.score += 2;
+          }else{
+            this.$message(str, 1500, () => {
+              location.reload();
+            });
+            this.score -= 2;
+          };
+          localStorage.setItem('score', this.score)
+        },
+      }
+    };
+    var Xui = Vue.extend(Main);
+    new Xui().$mount("#app");
+
+  </script>
+</body>
+
+</html>
