@@ -3,6 +3,9 @@ module.exports = {
   runtimeCompiler: true,
   publicPath: '.',
   outputDir: 'book',
+  devServer: {
+    port: 3002,     // 端口
+  },
   pages: {
     index: {
       entry: 'src/main.js',
